@@ -8,7 +8,6 @@ export default function NavBar() {
       <div className={styles.ListContainer}>
         <ul className={styles.ul}>
           <li className={styles.ListItem}>Inicio</li>
-          <li className={styles.ListItem}>Servicios</li>
           <li className={styles.ListItem}>Presupuesto</li>
           <li className={styles.ListItem}>Contacto</li>
         </ul>
