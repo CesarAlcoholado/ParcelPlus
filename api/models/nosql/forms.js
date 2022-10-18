@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const FormScheme = new mongoose.Schema(
   {
     shipment: {
-      type: ["particular", "empresa"],
+      type: ["Particular", "Empresa"],
     },
     name: {
       type: String,
@@ -12,14 +12,14 @@ const FormScheme = new mongoose.Schema(
       type: Number,
     },
     origenCity: {
-      type: ["Cipolletti", "Neuquen"],
+      type: ["Otra", "Cipolletti", "Neuquen", "Centenario", "Plottier", "Senillosa", "Cutral Co", "Plaza Huincul", "Zapala", "Cinco Saltos", "Contralmirante Cordero", "Barda del Medio", "Campo Grande", "San Isidro", "Villa Manzano", "El Chañar", "Añelo", "Rincon de los Sauces"],
     },
     email: {
       type: String,
       unique: true,
     },
     destineCity: {
-      type: ["Cipolletti", "Neuquen"],
+      type: ["Otra", "Cipolletti", "Neuquen", "Centenario", "Plottier", "Senillosa", "Cutral Co", "Plaza Huincul", "Zapala", "Cinco Saltos", "Contralmirante Cordero", "Barda del Medio", "Campo Grande", "San Isidro", "Villa Manzano", "El Chañar", "Añelo", "Rincon de los Sauces"],
     },
     moreDetails: {
       type: String,
@@ -36,7 +36,6 @@ const FormScheme = new mongoose.Schema(
     homeAdress: {
       type: String,
     }
-    
   },
   {
     timestamps: true,
