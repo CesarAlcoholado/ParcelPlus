@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import validate from "../../static/utils/functions/validation";
 import { ciudadOrigen, ciudadDestino } from "../../static/constants";
+import { useForm } from "../../static/utils/hooks/useForm";
 
-export default function Form() {
-  const [data, setData] = useState({
-    shipment: "",
+const initialForm = {
+   shipment: "",
     name: "",
     origenCity: "",
     destineCity: "",
@@ -13,20 +13,22 @@ export default function Form() {
     weight: null,
     measure: null,
     homeAdress: "",
-  });
+    moreDetails: ""
+};
 
-  const onInputChange = (e) => {
-    e.preventDefault();
-    setData({
-      ...data,
-      [e.target.name]: e.target.value,
-    });
-    validate(data);
-  };
+export default function Form() {
+
+  const {
+    form,
+    errors,
+    handleChange,
+    handleBlur,
+    handleSubmit
+  } = useForm(initialForm);
 
   return (
     <div>
-      <form>
+      <form onSubmit={handleSubmit}>
         <label htmlFor="">Seleccione un tipo de envio</label>
         <select>
           <option>Seleccione una opción</option>
@@ -49,46 +51,60 @@ export default function Form() {
         <input
           type="text"
           name="name"
-          value={data.name}
-          onChange={onInputChange}
+          value={form.name}
+          onBLur={handleBlur}
+          onChange={handleChange}
         />
         <label htmlFor="">Celular</label>
         <input
           type="number"
           name="cellphone"
-          value={data.cellphone}
-          onChange={onInputChange}
+          value={form.cellphone}
+          onBLur={handleBlur}
+          onChange={handleChange}
         />
         <label htmlFor="">Email</label>
         <input
           type="email"
           name="email"
-          value={data.email}
-          onChange={onInputChange}
+          value={form.email}
+          onBLur={handleBlur}
+          onChange={handleChange}
         />
         <label htmlFor="">Peso</label>
         <input
           type="number"
           name="weight"
-          value={data.weight}
-          onChange={onInputChange}
+          value={form.weight}
+          onBLur={handleBlur}
+          onChange={handleChange}
         />
         <label htmlFor="">Altura</label>
         <input
           type="number"
           name="measure"
-          value={data.measure}
-          onChange={onInputChange}
+          value={form.measure}
+          onBLur={handleBlur}
+          onChange={handleChange}
         />
         <label htmlFor="">Dirección</label>
         <input
           type="text"
           name="homeAdress"
-          value={data.homeAdress}
-          onChange={onInputChange}
+          value={form.homeAdress}
+          onBLur={handleBlur}
+          onChange={handleChange}
         />
         <label htmlFor="">Información adicional</label>
-        <textarea name="moreDetails" rows="5" cols="30"></textarea>
+        <textarea
+          name="moreDetails"
+          value={form.moreDetails}
+          rows="5"
+          cols="30"
+          onBLur={handleBlur}
+          onChange={handleChange}
+        ></textarea>
+        <input type="submit" value="Enviar"/>
       </form>
     </div>
   );

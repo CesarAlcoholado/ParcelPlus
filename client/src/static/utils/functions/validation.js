@@ -1,13 +1,13 @@
 
-export default function validate(data){
+export default function validate(form){
   const regExp = /^[a-zA-Z\s]*$/g;
   const error = {}
 
-  if (data.name.length < 2){
+  if (form.name.length < 2){
     error.name = "El nombre es demasiado corto"
-  }else if(!regExp.test(data.name)){
+  }else if(!regExp.test(form.name)){
     error.name = "Los caracteres ingresados no son válidos"
-  }else if(!data.name){
+  }else if(!form.name){
     error.name = "Ingrese un nombre"
   }
 
