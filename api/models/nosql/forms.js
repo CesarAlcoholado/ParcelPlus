@@ -4,6 +4,7 @@ const FormScheme = new mongoose.Schema(
   {
     shipment: {
       type: ["Particular", "Empresa"],
+      required: false
     },
     name: {
       type: String,
