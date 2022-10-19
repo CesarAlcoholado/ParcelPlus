@@ -1,8 +1,7 @@
+import { regExpLett, regExpCell, regExpEmail, regExpDetails } from "../../constants";
+
 
 export default function validate(form){
-  const regExpLett = /^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/;
-  const regExpCell = /^(\d{3})\s?(\d{3})\s?(\d{6})$/;
-  const regExpEmail = /^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$/;
 
   const errors = {}
 
@@ -18,10 +17,10 @@ export default function validate(form){
     errors.shipment = "Seleccione una opción de envio"
   }
 
-  if(!form.cellphone){
+  if(form.cellphone === 0){
     errors.cellphone = "Ingrese un numero de celular"
   }else if(!regExpCell.test(form.cellphone)){
-    errors.cellphone = "El numero ingresado no es válido"
+    errors.cellphone = "El número ingresado no es válido"
   }
 
   if(!form.email){
@@ -29,6 +28,17 @@ export default function validate(form){
   }else if(!regExpEmail.test(form.email)){
     errors.email = "El email ingresado no es valido"
   }
-  return errors
+
+  if (!regExpDetails.test(form.moreDetails)){
+    errors.moreDetails = "Máximo 255 caracteres."
+  } 
+  
+  if (form.weight > 700) {
+    errors.weight = "Peso máximo 700 kg"
+  }else if (form.weight < 0) {
+    errors.weight = "El peso ingresado no es válido"
+  }
+  
+  return errors;
 
 }

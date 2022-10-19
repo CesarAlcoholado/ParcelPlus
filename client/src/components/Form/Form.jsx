@@ -11,6 +11,7 @@ const initialForm = {
     email: "",
     weight: null,
     measure: null,
+    value: null,
     homeAdress: "",
     moreDetails: ""
 };
@@ -26,7 +27,7 @@ export default function Form() {
 
   return (
     <div>
-      <form onSubmit={handleSubmit} novalidate="novalidate">
+      <form onSubmit={handleSubmit} noValidate>
         <label>Seleccione un tipo de envio</label>
         <select name="shipment" value={form.shipment} onChange={handleChange}>
           <option value="0">Seleccione una opción</option>
@@ -80,7 +81,8 @@ export default function Form() {
         {errors.email && <p>{errors.email}</p>}
         <label>Peso</label>
         <input
-          type="number"
+          type="text"
+          inputMode="decimal"
           name="weight"
           value={form.weight}
           onChange={handleChange}
@@ -94,6 +96,14 @@ export default function Form() {
           onChange={handleChange}
         />
         {errors.measure && <p>{errors.measure}</p>}
+        <label>Valor</label>
+        <input
+          type="number"
+          name="value"
+          value={form.value}
+          onChange={handleChange}
+        />
+        {errors.value && <p>{errors.value}</p>}
         <label>Dirección</label>
         <input
           type="text"

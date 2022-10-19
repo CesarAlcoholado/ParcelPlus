@@ -40,3 +40,8 @@ export const ciudadDestino = [
   "Añelo",
   "Rincon de los Sauces",
 ];
+
+export const regExpLett = /^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/;
+export const regExpCell = /^(\d{3})\s?(\d{3})\s?(\d{6})$/;
+export const regExpEmail = /^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$/;
+export const regExpDetails = /^.{1,255}$/;
