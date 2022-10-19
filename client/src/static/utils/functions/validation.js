@@ -6,7 +6,7 @@ export default function validate(form){
   if (form.name.length < 2){
     errors.name = "El nombre es demasiado corto"
   }else if(!regExp.test(form.name)){
-    errors.name = "Los caracteres ingresados no son válidos"
+    errors.name = "Ingrese solo letras"
   }else if(!form.name.trim()){
     errors.name = "Ingrese un nombre"
   }

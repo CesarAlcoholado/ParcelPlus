@@ -14,6 +14,7 @@ export const useForm = (initialForm) => {
   };
 
   const handleSubmit = (e) => {
+    e.preventDefault();
     setErrors(validate(form))
   };
 

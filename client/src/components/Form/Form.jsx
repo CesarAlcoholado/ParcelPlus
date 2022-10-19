@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import validate from "../../static/utils/functions/validation";
 import { ciudadOrigen, ciudadDestino } from "../../static/constants";
 import { useForm } from "../../static/utils/hooks/useForm";
 
@@ -22,7 +21,6 @@ export default function Form() {
     form,
     errors,
     handleChange,
-    handleBlur,
     handleSubmit
   } = useForm(initialForm);
 
@@ -30,19 +28,19 @@ export default function Form() {
     <div>
       <form onSubmit={handleSubmit}>
         <label>Seleccione un tipo de envio</label>
-        <select>
+        <select onChange={handleChange}>
           <option>Seleccione una opción</option>
           <option value="Particular">Envio Personal</option>
           <option value="Empresa">Envio para empresa</option>
         </select>
         <label>Ciudad de origen</label>
-        <select>
+        <select onChange={handleChange}>
           {ciudadOrigen.map((c) => (
             <option value={c}>{c}</option>
           ))}
         </select>
         <label>Ciudad de destino</label>
-        <select>
+        <select onChange={handleChange}>
           {ciudadDestino.map((d) => (
             <option value={d}>{d}</option>
           ))}
@@ -104,7 +102,7 @@ export default function Form() {
           onChange={handleChange}
         ></textarea>
         {errors.moreDetails && <p>{errors.moreDetails}</p>}
-        <input type="submit" value="Enviar"/>
+        <input type="submit" value="Enviar" />
       </form>
     </div>
   );
