@@ -6,11 +6,12 @@ const validatorCreateItem = [
   check("name").exists().notEmpty(),
   check("cellphone").exists().notEmpty(),
   check("origenCity").exists().notEmpty(),
-  check("email").exists().notEmpty(),
+  check("email").notEmpty().isEmail(),
   check("destineCity").exists().notEmpty(),
-  check("weight").exists().notEmpty(),
-  check("measure").exists().notEmpty(),
-  check("value").exists().notEmpty(),
+  check("weight").exists().notEmpty().isNumeric(),
+  check("measure").exists().notEmpty().isNumeric(),
+  check("value").exists().notEmpty().isNumeric(),
+  check("comment"),
   check("homeAdress").exists().notEmpty(),
   (req, res, next) => {
     return validateResults(req, res, next);

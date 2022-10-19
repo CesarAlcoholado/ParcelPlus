@@ -4,7 +4,6 @@ const FormScheme = new mongoose.Schema(
   {
     shipment: {
       type: ["Particular", "Empresa"],
-      required: false
     },
     name: {
       type: String,
@@ -14,15 +13,16 @@ const FormScheme = new mongoose.Schema(
     },
     origenCity: {
       type: ["Otra", "Cipolletti", "Neuquen", "Centenario", "Plottier", "Senillosa", "Cutral Co", "Plaza Huincul", "Zapala", "Cinco Saltos", "Contralmirante Cordero", "Barda del Medio", "Campo Grande", "San Isidro", "Villa Manzano", "El Chañar", "Añelo", "Rincon de los Sauces"],
+      default: "Otra"
     },
     email: {
       type: String,
-      unique: true,
     },
     destineCity: {
       type: ["Otra", "Cipolletti", "Neuquen", "Centenario", "Plottier", "Senillosa", "Cutral Co", "Plaza Huincul", "Zapala", "Cinco Saltos", "Contralmirante Cordero", "Barda del Medio", "Campo Grande", "San Isidro", "Villa Manzano", "El Chañar", "Añelo", "Rincon de los Sauces"],
+      default: "Otra"
     },
-    moreDetails: {
+    comment: {
       type: String,
     },
     weight: {
