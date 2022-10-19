@@ -52,7 +52,6 @@ export default function Form() {
           type="text"
           name="name"
           value={form.name}
-          onBLur={handleBlur}
           onChange={handleChange}
         />
         {errors.name && <p>{errors.name}</p>}
@@ -61,7 +60,6 @@ export default function Form() {
           type="number"
           name="cellphone"
           value={form.cellphone}
-          onBLur={handleBlur}
           onChange={handleChange}
         />
         {errors.cellphone && <p>{errors.cellphone}</p>}
@@ -70,7 +68,6 @@ export default function Form() {
           type="email"
           name="email"
           value={form.email}
-          onBLur={handleBlur}
           onChange={handleChange}
         />
         {errors.email && <p>{errors.email}</p>}
@@ -79,7 +76,6 @@ export default function Form() {
           type="number"
           name="weight"
           value={form.weight}
-          onBLur={handleBlur}
           onChange={handleChange}
         />
         {errors.weight && <p>{errors.weight}</p>}
@@ -88,7 +84,6 @@ export default function Form() {
           type="number"
           name="measure"
           value={form.measure}
-          onBLur={handleBlur}
           onChange={handleChange}
         />
         {errors.measure && <p>{errors.measure}</p>}
@@ -97,7 +92,6 @@ export default function Form() {
           type="text"
           name="homeAdress"
           value={form.homeAdress}
-          onBLur={handleBlur}
           onChange={handleChange}
         />
         {errors.homeAdress && <p>{errors.homeAdress}</p>}
@@ -107,7 +101,6 @@ export default function Form() {
           value={form.moreDetails}
           rows="5"
           cols="30"
-          onBLur={handleBlur}
           onChange={handleChange}
         ></textarea>
         {errors.moreDetails && <p>{errors.moreDetails}</p>}
