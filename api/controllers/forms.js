@@ -13,7 +13,8 @@ const createItem = async (req, res) => {
       from: { name: data.name, address: data.email },
       to: "parcelplus.pp@gmail.com",
       subject: "Consulta desde ParcelPlus.com.ar",
-      html: `<h3>Datos</h3>
+      html: `<h2>Datos</h2>
+      <h3>Email: ${data.email}</h3>
       <ul>
           <li>Remitente: ${data.name}</li>
           <li>Tipo de envio: ${data.shipment}</li>
