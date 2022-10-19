@@ -26,21 +26,30 @@ export default function Form() {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} novalidate="novalidate">
         <label>Seleccione un tipo de envio</label>
-        <select onChange={handleChange}>
-          <option>Seleccione una opción</option>
+        <select name="shipment" value={form.shipment} onChange={handleChange}>
+          <option value="0">Seleccione una opción</option>
           <option value="Particular">Envio Personal</option>
           <option value="Empresa">Envio para empresa</option>
         </select>
+        {errors.shipment && <p>{errors.shipment}</p>}
         <label>Ciudad de origen</label>
-        <select onChange={handleChange}>
+        <select
+          name="origenCity"
+          value={form.origenCity}
+          onChange={handleChange}
+        >
           {ciudadOrigen.map((c) => (
             <option value={c}>{c}</option>
           ))}
         </select>
         <label>Ciudad de destino</label>
-        <select onChange={handleChange}>
+        <select
+          name="destineCity"
+          value={form.destineCity}
+          onChange={handleChange}
+        >
           {ciudadDestino.map((d) => (
             <option value={d}>{d}</option>
           ))}
