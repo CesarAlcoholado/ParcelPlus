@@ -23,6 +23,22 @@ export default function Form() {
           onChange={handleChange}
         />
         {errors.birth && <p>{errors.birth}</p>}
+        <label>Provincia</label>
+        <input
+          type="text"
+          name="region"
+          value={form.region}
+          onChange={handleChange}
+        />
+        {errors.region && <p>{errors.region}</p>}
+        <label>Ciudad</label>
+        <input
+          type="text"
+          name="city"
+          value={form.city}
+          onChange={handleChange}
+        />
+        {errors.city && <p>{errors.city}</p>}
         <label>Domicilio</label>
         <input
           type="text"
