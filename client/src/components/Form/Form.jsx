@@ -29,25 +29,25 @@ export default function Form() {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="">Seleccione un tipo de envio</label>
+        <label>Seleccione un tipo de envio</label>
         <select>
           <option>Seleccione una opción</option>
           <option value="Particular">Envio Personal</option>
           <option value="Empresa">Envio para empresa</option>
         </select>
-        <label htmlFor="">Ciudad de origen</label>
+        <label>Ciudad de origen</label>
         <select>
           {ciudadOrigen.map((c) => (
             <option value={c}>{c}</option>
           ))}
         </select>
-        <label htmlFor="">Ciudad de destino</label>
+        <label>Ciudad de destino</label>
         <select>
           {ciudadDestino.map((d) => (
             <option value={d}>{d}</option>
           ))}
         </select>
-        <label htmlFor="">Nombre</label>
+        <label>Nombre</label>
         <input
           type="text"
           name="name"
@@ -55,7 +55,8 @@ export default function Form() {
           onBLur={handleBlur}
           onChange={handleChange}
         />
-        <label htmlFor="">Celular</label>
+        {errors.name && <p>{errors.name}</p>}
+        <label>Celular</label>
         <input
           type="number"
           name="cellphone"
@@ -63,7 +64,8 @@ export default function Form() {
           onBLur={handleBlur}
           onChange={handleChange}
         />
-        <label htmlFor="">Email</label>
+        {errors.cellphone && <p>{errors.cellphone}</p>}
+        <label>Email</label>
         <input
           type="email"
           name="email"
@@ -71,7 +73,8 @@ export default function Form() {
           onBLur={handleBlur}
           onChange={handleChange}
         />
-        <label htmlFor="">Peso</label>
+        {errors.email && <p>{errors.email}</p>}
+        <label>Peso</label>
         <input
           type="number"
           name="weight"
@@ -79,7 +82,8 @@ export default function Form() {
           onBLur={handleBlur}
           onChange={handleChange}
         />
-        <label htmlFor="">Altura</label>
+        {errors.weight && <p>{errors.weight}</p>}
+        <label>Altura</label>
         <input
           type="number"
           name="measure"
@@ -87,7 +91,8 @@ export default function Form() {
           onBLur={handleBlur}
           onChange={handleChange}
         />
-        <label htmlFor="">Dirección</label>
+        {errors.measure && <p>{errors.measure}</p>}
+        <label>Dirección</label>
         <input
           type="text"
           name="homeAdress"
@@ -95,7 +100,8 @@ export default function Form() {
           onBLur={handleBlur}
           onChange={handleChange}
         />
-        <label htmlFor="">Información adicional</label>
+        {errors.homeAdress && <p>{errors.homeAdress}</p>}
+        <label>Información adicional</label>
         <textarea
           name="moreDetails"
           value={form.moreDetails}
@@ -104,6 +110,7 @@ export default function Form() {
           onBLur={handleBlur}
           onChange={handleChange}
         ></textarea>
+        {errors.moreDetails && <p>{errors.moreDetails}</p>}
         <input type="submit" value="Enviar"/>
       </form>
     </div>
