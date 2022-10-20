@@ -11,6 +11,7 @@ const initialForm = {
     email: "",
     weight: null,
     measure: null,
+    value: null,
     homeAdress: "",
     moreDetails: ""
 };
@@ -26,21 +27,30 @@ export default function Form() {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} noValidate>
         <label>Seleccione un tipo de envio</label>
-        <select onChange={handleChange}>
-          <option>Seleccione una opción</option>
+        <select name="shipment" value={form.shipment} onChange={handleChange}>
+          <option value="0">Seleccione una opción</option>
           <option value="Particular">Envio Personal</option>
           <option value="Empresa">Envio para empresa</option>
         </select>
+        {errors.shipment && <p>{errors.shipment}</p>}
         <label>Ciudad de origen</label>
-        <select onChange={handleChange}>
+        <select
+          name="origenCity"
+          value={form.origenCity}
+          onChange={handleChange}
+        >
           {ciudadOrigen.map((c) => (
             <option value={c}>{c}</option>
           ))}
         </select>
         <label>Ciudad de destino</label>
-        <select onChange={handleChange}>
+        <select
+          name="destineCity"
+          value={form.destineCity}
+          onChange={handleChange}
+        >
           {ciudadDestino.map((d) => (
             <option value={d}>{d}</option>
           ))}
@@ -71,20 +81,34 @@ export default function Form() {
         {errors.email && <p>{errors.email}</p>}
         <label>Peso</label>
         <input
-          type="number"
+          type="text"
+          inputMode="decimal"
           name="weight"
           value={form.weight}
           onChange={handleChange}
         />
+        {
+          //Agregar parseFloat a peso, altura y valor.
+        }
         {errors.weight && <p>{errors.weight}</p>}
         <label>Altura</label>
         <input
-          type="number"
+          type="text"
+          inputMode="decimal"
           name="measure"
           value={form.measure}
           onChange={handleChange}
         />
         {errors.measure && <p>{errors.measure}</p>}
+        <label>Valor</label>
+        <input
+          type="text"
+          inputMode="decimal"
+          name="value"
+          value={form.value}
+          onChange={handleChange}
+        />
+        {errors.value && <p>{errors.value}</p>}
         <label>Dirección</label>
         <input
           type="text"
