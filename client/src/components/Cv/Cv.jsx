@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useForm } from "../../static/utils/hooks/useForm";
 
 const initialCv = {
@@ -17,13 +17,19 @@ const initialCv = {
   holder: "",
 };
 
+const type = "cvForm";
 
 export default function Cv() {
-  const { form, errors, handleChange, handleSubmit } = useForm(initialCv);
+  const { 
+    form, 
+    errors, 
+    handleChange, 
+    handleSubmit
+  } = useForm(initialCv, type);
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <form noValidate onSubmit={handleSubmit}>
         <label>Nombre y Apellido</label>
         <input
           type="text"
@@ -32,7 +38,7 @@ export default function Cv() {
           onChange={handleChange}
         />
         {errors.name && <p>{errors.name}</p>}
-        <label>Edad</label>
+        <label>Edad (debes ser mayor a 18 años)</label>
         <input
           type="number"
           name="age"
@@ -82,12 +88,13 @@ export default function Cv() {
         {errors.cellphone && <p>{errors.cellphone}</p>}
         <label>Tipo de vehiculo utilitario</label>
         <select name="car_type" value={form.car_type} onChange={handleChange}>
-          <option>Seleccione una opción</option>
+          <option value="0">Seleccione una opción</option>
           <option value="Auto">Auto</option>
           <option value="Camioneta">Camioneta</option>
           <option value="Trafic">Tráfic</option>
           <option value="Camion">Camión</option>
         </select>
+        {errors.car_type && <p>{errors.car_type}</p>}
         <label>Marca</label>
         <input
           type="text"
@@ -106,22 +113,25 @@ export default function Cv() {
         {errors.car_model && <p>{errors.car_model}</p>}
         <label>Tiene licencia?</label>
         <select name="license" value={form.license} onChange={handleChange}>
-          <option>Seleccione una opción</option>
+          <option value="0">Seleccione una opción</option>
           <option value="Si">Sí</option>
           <option value="No">No</option>
         </select>
-        <label>Póliza</label>
+        {errors.license && <p>{errors.license}</p>}
+        <label>Su póliza astá al dia?</label>
         <select name="policy" value={form.policy} onChange={handleChange}>
-          <option>Esta al dia?</option>
+          <option value="0">Seleccione una opción</option>
           <option value="Si">Sí</option>
           <option value="No">No</option>
         </select>
+        {errors.policy && <p>{errors.policy}</p>}
         <label>Es titular?</label>
         <select name="holder" value={form.holder} onChange={handleChange}>
-          <option>Seleccione una opción</option>
+          <option value="0">Seleccione una opción</option>
           <option value="Si">Sí</option>
           <option value="No">No</option>
         </select>
+        {errors.holder && <p>{errors.holder}</p>}
         <input type="submit" value="Enviar" />
       </form>
     </div>

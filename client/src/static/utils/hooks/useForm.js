@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import validate from '../functions/validation';
+import cvValidation from '../functions/cvValidation';
 
-export const useForm = (initialForm) => {
+export const useForm = (initialForm, type) => {
   const [form, setForm] = useState(initialForm);
   const [errors, setErrors] = useState({})
 
@@ -15,7 +16,11 @@ export const useForm = (initialForm) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setErrors(validate(form))
+    if(type === "packageForm"){
+      setErrors(validate(form))
+    } else  if (type === "cvForm"){
+      setErrors(cvValidation(form))
+    }
   };
 
   return {

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { ciudadOrigen, ciudadDestino } from "../../static/constants";
 import { useForm } from "../../static/utils/hooks/useForm";
 
@@ -16,6 +16,8 @@ const initialForm = {
     moreDetails: ""
 };
 
+const type = "packageForm"
+
 export default function Form() {
 
   const {
@@ -23,7 +25,7 @@ export default function Form() {
     errors,
     handleChange,
     handleSubmit
-  } = useForm(initialForm);
+  } = useForm(initialForm, type);
 
   return (
     <div>
