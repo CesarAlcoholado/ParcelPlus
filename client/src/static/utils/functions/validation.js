@@ -33,7 +33,7 @@ export default function validate(form){
     errors.moreDetails = "Máximo 255 caracteres."
   } 
   
-  if (form.weight > 700) {
+  if (parseFloat(form.weight) > 700) {
     errors.weight = "Peso máximo 700 kg"
   }else if (form.weight < 0) {
     errors.weight = "Ingrese un peso"
@@ -41,7 +41,7 @@ export default function validate(form){
     errors.weight = "El campo contiene caracteres invalidos"
   } 
 
-  if (form.measure > 200) {
+  if (parseFloat(form.measure) > 200) {
     errors.measure = "Altura máxima 2 mts";
   } else if (form.measure < 0) {
     errors.measure = "Ingrese una altura";
