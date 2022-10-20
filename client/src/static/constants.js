@@ -42,7 +42,8 @@ export const ciudadDestino = [
 ];
 
 export const regExpLett = /^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/;
-export const regExpCell = /^(\d{3})\s?(\d{3})\s?(\d{6})$/;
+export const regExpCell =
+  /^(?:(?:00)?549?)?0?(?:11|[2368]\d)(?:(?=\d{0,2}15)\d{2})??\d{8}$/;
 export const regExpEmail = /^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$/;
 export const regExpDetails = /^.{1,255}$/;
 export const regExpNumbers = /^(0|[1-9]\d*)(\.\d+)?(,\d+)?$/;

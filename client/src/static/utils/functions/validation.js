@@ -10,19 +10,18 @@ import {
 export default function validate(form) {
   const errors = {};
 
-  if (form.name.length < 2) {
+  if (!form.name.trim()) {
+    errors.name = "Ingrese un nombre";
+  } else if (form.name.length < 2) {
     errors.name = "El nombre es demasiado corto";
   } else if (!regExpLett.test(form.name)) {
     errors.name = "Ingrese solo letras";
-  } else if (!form.name.trim()) {
-    errors.name = "Ingrese un nombre";
-  }
-
-  if (form.shipment === "0") {
+    
+  } else if (!form.shipment || form.shipment === "0") {
     errors.shipment = "Seleccione una opción de envio";
   }
 
-  if (form.cellphone === 0) {
+  if (!form.cellphone) {
     errors.cellphone = "Ingrese un numero de celular";
   } else if (!regExpCell.test(form.cellphone)) {
     errors.cellphone = "El número ingresado no es válido";
@@ -40,26 +39,28 @@ export default function validate(form) {
     }
   }
 
-  if (parseFloat(form.weight) > 700) {
-    errors.weight = "Peso máximo 700 kg";
-  } else if (form.weight < 0) {
+  if (form.weight) {
+    if (form.weight < 0) {
     errors.weight = "Ingrese un peso válido";
-  } else if (!regExpNumbers.test(form.weight)) {
+    } else if (!regExpNumbers.test(form.weight)) {
     errors.weight = "El campo contiene caracteres invalidos";
+    }
   }
 
-  if (parseFloat(form.measure) > 200) {
-    errors.measure = "Altura máxima 2 mts";
-  } else if (form.measure < 0) {
-    errors.measure = "Ingrese una altura válida";
-  } else if (!regExpNumbers.test(form.measure)) {
-    errors.measure = "El campo contiene caracteres invalidos";
+  if (form.measure) {
+    if (form.measure < 0) {
+      errors.measure = "Ingrese una altura válida";
+    } else if (!regExpNumbers.test(form.measure)) {
+      errors.measure = "El campo contiene caracteres invalidos";
+    }
   }
 
-  if (form.value < 0) {
+  if(form.value){
+    if (form.value < 0) {
     errors.value = "Ingrese un valor";
   } else if (!regExpNumbers.test(form.value)) {
     errors.value = "El campo contiene caracteres invalidos";
+    }
   }
 
   if (!form.homeAdress){
