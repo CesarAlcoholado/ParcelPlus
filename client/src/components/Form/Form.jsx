@@ -87,10 +87,14 @@ export default function Form() {
           value={form.weight}
           onChange={handleChange}
         />
+        {
+          //Agregar parseFloat a peso, altura y valor.
+        }
         {errors.weight && <p>{errors.weight}</p>}
         <label>Altura</label>
         <input
-          type="number"
+          type="text"
+          inputMode="decimal"
           name="measure"
           value={form.measure}
           onChange={handleChange}
@@ -98,7 +102,8 @@ export default function Form() {
         {errors.measure && <p>{errors.measure}</p>}
         <label>Valor</label>
         <input
-          type="number"
+          type="text"
+          inputMode="decimal"
           name="value"
           value={form.value}
           onChange={handleChange}

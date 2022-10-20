@@ -1,4 +1,4 @@
-import { regExpLett, regExpCell, regExpEmail, regExpDetails } from "../../constants";
+import { regExpLett, regExpCell, regExpEmail, regExpDetails, regExpNumbers, regExpDirection } from "../../constants";
 
 
 export default function validate(form){
@@ -36,9 +36,29 @@ export default function validate(form){
   if (form.weight > 700) {
     errors.weight = "Peso máximo 700 kg"
   }else if (form.weight < 0) {
-    errors.weight = "El peso ingresado no es válido"
+    errors.weight = "Ingrese un peso"
+  }else if (!regExpNumbers.test(form.weight)){
+    errors.weight = "El campo contiene caracteres invalidos"
+  } 
+
+  if (form.measure > 200) {
+    errors.measure = "Altura máxima 2 mts";
+  } else if (form.measure < 0) {
+    errors.measure = "Ingrese una altura";
+  } else if (!regExpNumbers.test(form.measure)) {
+    errors.measure = "El campo contiene caracteres invalidos";
   }
-  
+
+  if (form.value < 0) {
+    errors.value = "Ingrese un valor";
+  } else if (!regExpNumbers.test(form.value)) {
+    errors.value = "El campo contiene caracteres invalidos";
+  }
+
+  if(!regExpDirection.test(form.homeAdress)){
+    errors.homeAdress = "La direccion ingresada no es válida"
+  }
+
   return errors;
 
 }
