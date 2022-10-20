@@ -1,5 +1,6 @@
 import React from "react";
 import { useForm } from "../../static/utils/hooks/useForm";
+import { cvType } from "../../static/constants";
 
 const initialCv = {
   name: "",
@@ -17,15 +18,12 @@ const initialCv = {
   holder: "",
 };
 
-const type = "cvForm";
 
 export default function Cv() {
-  const { 
-    form, 
-    errors, 
-    handleChange, 
-    handleSubmit
-  } = useForm(initialCv, type);
+  const { form, errors, handleChange, handleSubmit } = useForm(
+    initialCv,
+    cvType
+  );
 
   return (
     <div>

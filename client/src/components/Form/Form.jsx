@@ -1,6 +1,7 @@
 import React from "react";
 import { ciudadOrigen, ciudadDestino } from "../../static/constants";
 import { useForm } from "../../static/utils/hooks/useForm";
+import { packageType } from "../../static/constants";
 
 const initialForm = {
   shipment: "",
@@ -16,12 +17,10 @@ const initialForm = {
   moreDetails: "",
 };
 
-const type = "packageForm";
-
 export default function Form() {
   const { form, errors, handleChange, handleSubmit } = useForm(
     initialForm,
-    type
+    packageType
   );
 
   return (

@@ -49,3 +49,6 @@ export const regExpDetails = /^.{1,255}$/;
 export const regExpNumbers = /^(0|[1-9]\d*)(\.\d+)?(,\d+)?$/;
 export const regExpDirection = /^[a-z0-9\s]+\d+$/i;
 export const regExpAge = /^(?:1[01][0-9]|120|1[8-9]|[2-9][0-9])$/;
+
+export const packageType = "packageForm";
+export const cvType = "cvForm";
