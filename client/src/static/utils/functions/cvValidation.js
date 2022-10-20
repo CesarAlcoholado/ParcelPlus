@@ -2,8 +2,6 @@ import {
   regExpLett,
   regExpCell,
   regExpEmail,
-  regExpDetails,
-  regExpNumbers,
   regExpDirection,
   regExpAge
 } from "../../constants";
@@ -22,8 +20,7 @@ export default function cvValidate(form){
 
   if(!form.age){
     errors.age = "Ingrese edad"
-  }
-  else if (!regExpAge.test(form.age)){
+  } else if (!regExpAge.test(form.age)){
     errors.age = "ingrese una edad válida"
   }
 

@@ -3,15 +3,15 @@ import { useForm } from "../../static/utils/hooks/useForm";
 
 const initialCv = {
   name: "",
-  age: "",
+  age: null,
   region: "",
   city: "",
   homeAdress: "",
   email: "",
-  cellphone: "",
+  cellphone: null,
   car_type: "",
   car_brand: "",
-  car_model: "",
+  car_model: null,
   license: "",
   policy: "",
   holder: "",
@@ -30,7 +30,7 @@ export default function Cv() {
   return (
     <div>
       <form noValidate onSubmit={handleSubmit}>
-        <label>Nombre y Apellido</label>
+        <label>Nombre y Apellido*</label>
         <input
           type="text"
           name="name"
@@ -38,7 +38,7 @@ export default function Cv() {
           onChange={handleChange}
         />
         {errors.name && <p>{errors.name}</p>}
-        <label>Edad (debes ser mayor a 18 años)</label>
+        <label>Edad* (debes ser mayor a 18 años)</label>
         <input
           type="number"
           name="age"
@@ -46,7 +46,7 @@ export default function Cv() {
           onChange={handleChange}
         />
         {errors.age && <p>{errors.age}</p>}
-        <label>Provincia</label>
+        <label>Provincia*</label>
         <input
           type="text"
           name="region"
@@ -54,7 +54,7 @@ export default function Cv() {
           onChange={handleChange}
         />
         {errors.region && <p>{errors.region}</p>}
-        <label>Ciudad</label>
+        <label>Ciudad*</label>
         <input
           type="text"
           name="city"
@@ -62,7 +62,7 @@ export default function Cv() {
           onChange={handleChange}
         />
         {errors.city && <p>{errors.city}</p>}
-        <label>Domicilio</label>
+        <label>Domicilio*</label>
         <input
           type="text"
           name="homeAdress"
@@ -70,7 +70,7 @@ export default function Cv() {
           onChange={handleChange}
         />
         {errors.homeAdress && <p>{errors.homeAdress}</p>}
-        <label>Email</label>
+        <label>Email*</label>
         <input
           type="email"
           name="email"
@@ -78,7 +78,7 @@ export default function Cv() {
           onChange={handleChange}
         />
         {errors.email && <p>{errors.email}</p>}
-        <label>Celular</label>
+        <label>Celular*</label>
         <input
           type="number"
           name="cellphone"
@@ -86,7 +86,7 @@ export default function Cv() {
           onChange={handleChange}
         />
         {errors.cellphone && <p>{errors.cellphone}</p>}
-        <label>Tipo de vehiculo utilitario</label>
+        <label>Tipo de vehiculo utilitario*</label>
         <select name="car_type" value={form.car_type} onChange={handleChange}>
           <option value="0">Seleccione una opción</option>
           <option value="Auto">Auto</option>
@@ -95,7 +95,7 @@ export default function Cv() {
           <option value="Camion">Camión</option>
         </select>
         {errors.car_type && <p>{errors.car_type}</p>}
-        <label>Marca</label>
+        <label>Marca*</label>
         <input
           type="text"
           name="car_brand"
@@ -103,7 +103,7 @@ export default function Cv() {
           onChange={handleChange}
         />
         {errors.car_brand && <p>{errors.car_brand}</p>}
-        <label>Modelo del vehiculo</label>
+        <label>Modelo del vehiculo*</label>
         <input
           type="number"
           name="car_model"
@@ -111,21 +111,21 @@ export default function Cv() {
           onChange={handleChange}
         />
         {errors.car_model && <p>{errors.car_model}</p>}
-        <label>Tiene licencia?</label>
+        <label>Tiene licencia?*</label>
         <select name="license" value={form.license} onChange={handleChange}>
           <option value="0">Seleccione una opción</option>
           <option value="Si">Sí</option>
           <option value="No">No</option>
         </select>
         {errors.license && <p>{errors.license}</p>}
-        <label>Su póliza astá al dia?</label>
+        <label>Su póliza astá al dia?*</label>
         <select name="policy" value={form.policy} onChange={handleChange}>
           <option value="0">Seleccione una opción</option>
           <option value="Si">Sí</option>
           <option value="No">No</option>
         </select>
         {errors.policy && <p>{errors.policy}</p>}
-        <label>Es titular?</label>
+        <label>Es titular?*</label>
         <select name="holder" value={form.holder} onChange={handleChange}>
           <option value="0">Seleccione una opción</option>
           <option value="Si">Sí</option>

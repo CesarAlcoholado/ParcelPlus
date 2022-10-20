@@ -16,16 +16,13 @@ const initialForm = {
   moreDetails: "",
 };
 
-const type = "packageForm"
+const type = "packageForm";
 
 export default function Form() {
-
-  const {
-    form,
-    errors,
-    handleChange,
-    handleSubmit
-  } = useForm(initialForm, type);
+  const { form, errors, handleChange, handleSubmit } = useForm(
+    initialForm,
+    type
+  );
 
   return (
     <div>
@@ -43,20 +40,24 @@ export default function Form() {
           value={form.origenCity}
           onChange={handleChange}
         >
+          <option value="0">Seleccione una opción</option>
           {ciudadOrigen.map((c) => (
             <option value={c}>{c}</option>
           ))}
         </select>
+        {errors.origenCity && <p>{errors.origenCity}</p>}
         <label>Ciudad de destino*</label>
         <select
           name="destineCity"
           value={form.destineCity}
           onChange={handleChange}
         >
+          <option value="0">Seleccione una opción</option>
           {ciudadDestino.map((d) => (
             <option value={d}>{d}</option>
           ))}
         </select>
+        {errors.destineCity && <p>{errors.destineCity}</p>}
         <label>Nombre*</label>
         <input
           type="text"
