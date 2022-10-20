@@ -44,7 +44,7 @@ export default function validate(form){
   if (parseFloat(form.measure) > 200) {
     errors.measure = "Altura máxima 2 mts";
   } else if (form.measure < 0) {
-    errors.measure = "Ingrese una altura";
+    errors.measure = "Ingrese una altura válida";
   } else if (!regExpNumbers.test(form.measure)) {
     errors.measure = "El campo contiene caracteres invalidos";
   }

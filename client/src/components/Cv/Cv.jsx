@@ -1,8 +1,25 @@
 import React, { useState } from "react";
 import { useForm } from "../../static/utils/hooks/useForm";
 
-export default function Form() {
-  const { form, errors, handleChange, handleSubmit } = useForm(initialForm);
+const initialCv = {
+  name: "",
+  age: "",
+  region: "",
+  city: "",
+  homeAdress: "",
+  email: "",
+  cellphone: "",
+  car_type: "",
+  car_brand: "",
+  car_model: "",
+  license: "",
+  policy: "",
+  holder: "",
+};
+
+
+export default function Cv() {
+  const { form, errors, handleChange, handleSubmit } = useForm(initialCv);
 
   return (
     <div>
@@ -18,11 +35,11 @@ export default function Form() {
         <label>Edad</label>
         <input
           type="number"
-          name="birth"
-          value={form.birth}
+          name="age"
+          value={form.age}
           onChange={handleChange}
         />
-        {errors.birth && <p>{errors.birth}</p>}
+        {errors.age && <p>{errors.age}</p>}
         <label>Provincia</label>
         <input
           type="text"
@@ -64,43 +81,43 @@ export default function Form() {
         />
         {errors.cellphone && <p>{errors.cellphone}</p>}
         <label>Tipo de vehiculo utilitario</label>
-        <select onChange={handleChange}>
+        <select name="car_type" value={form.car_type} onChange={handleChange}>
           <option>Seleccione una opción</option>
-          <option value="Si">Auto</option>
-          <option value="No">Camioneta</option>
-          <option value="No">Tráfic</option>
-          <option value="No">Camion</option>
+          <option value="Auto">Auto</option>
+          <option value="Camioneta">Camioneta</option>
+          <option value="Trafic">Tráfic</option>
+          <option value="Camion">Camión</option>
         </select>
         <label>Marca</label>
         <input
           type="text"
-          name="brand"
-          value={form.brand}
+          name="car_brand"
+          value={form.car_brand}
           onChange={handleChange}
         />
-        {errors.brand && <p>{errors.brand}</p>}
+        {errors.car_brand && <p>{errors.car_brand}</p>}
         <label>Modelo del vehiculo</label>
         <input
           type="number"
-          name="model"
-          value={form.model}
+          name="car_model"
+          value={form.car_model}
           onChange={handleChange}
         />
-        {errors.model && <p>{errors.model}</p>}
-        <label>Tenes licencia?</label>
-        <select onChange={handleChange}>
+        {errors.car_model && <p>{errors.car_model}</p>}
+        <label>Tiene licencia?</label>
+        <select name="license" value={form.license} onChange={handleChange}>
           <option>Seleccione una opción</option>
           <option value="Si">Sí</option>
           <option value="No">No</option>
         </select>
-        <label>Poliza</label>
-        <select onChange={handleChange}>
+        <label>Póliza</label>
+        <select name="policy" value={form.policy} onChange={handleChange}>
           <option>Esta al dia?</option>
           <option value="Si">Sí</option>
           <option value="No">No</option>
         </select>
         <label>Es titular?</label>
-        <select onChange={handleChange}>
+        <select name="holder" value={form.holder} onChange={handleChange}>
           <option>Seleccione una opción</option>
           <option value="Si">Sí</option>
           <option value="No">No</option>
