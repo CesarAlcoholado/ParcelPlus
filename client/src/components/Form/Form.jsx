@@ -25,7 +25,7 @@ export default function Form() {
 
   return (
     <div>
-      <form onSubmit={handleSubmit} noValidate>
+      <form id="quotation" onSubmit={handleSubmit} noValidate>
         <label>Seleccione un tipo de envio*</label>
         <select name="shipment" value={form.shipment} onChange={handleChange}>
           <option value="0">Seleccione una opción</option>
@@ -119,7 +119,7 @@ export default function Form() {
           onChange={handleChange}
         />
         {errors.homeAdress && <p>{errors.homeAdress}</p>}
-        <label>Información adicional</label>
+        <label id="details">Información adicional</label>
         <textarea
           name="moreDetails"
           value={form.moreDetails}
