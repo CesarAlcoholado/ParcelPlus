@@ -10,12 +10,11 @@ const createItem = async (req, res) => {
     let data = await formsModel.create(body);
 
     await transporter.sendMail({
-      from: `${data.name} ${data.email}` ,
+      from: `${data.name} ${data.email}`,
       to: "parcelplus.pp@gmail.com",
       subject: "Consulta desde ParcelPlus.com.ar",
       html: `<h2>Datos</h2>
-      <h3>Email: ${data.email}</h3>
-      <ul>
+      <h3>${data.email}</h3>
           <li>Remitente: ${data.name}</li>
           <li>Tipo de envio: ${data.shipment}</li>
           <li>Telofono: ${data.cellphone}</li>
@@ -25,8 +24,7 @@ const createItem = async (req, res) => {
           <li>Medida: ${data.measure}</li>
           <li>Valor: ${data.value}</li>
           <li>Direccion de destino: ${data.homeAdress}</li>
-          <li>Comentario: ${data.comment}</li>
-      </ul>`,      
+          <li>Comentario: ${data.comment}</li>`,
     });
     try {
       res.send({ data });
