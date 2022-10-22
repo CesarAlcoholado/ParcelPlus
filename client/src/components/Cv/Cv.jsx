@@ -130,7 +130,26 @@ export default function Cv() {
           <option value="No">No</option>
         </select>
         {errors.holder && <p>{errors.holder}</p>}
-        <input type="submit" value="Enviar" />
+        <input
+          type="submit"
+          value="Enviar"
+          disabled={
+            Object.keys(errors).length ||
+            errors.name ||
+            errors.age ||
+            errors.region ||
+            errors.city ||
+            errors.homeAdress ||
+            errors.email ||
+            errors.cellphone ||
+            errors.car_type ||
+            errors.car_brand ||
+            errors.car_model ||
+            errors.license ||
+            errors.policy ||
+            errors.holder
+          }
+        />
       </form>
     </div>
   );
