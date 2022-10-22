@@ -89,9 +89,6 @@ export default function Form() {
           value={form.weight}
           onChange={handleChange}
         />
-        {
-          //Agregar parseFloat a peso, altura y valor.
-        }
         {errors.weight && <p>{errors.weight}</p>}
         <label>Altura aproximada (en cm.)</label>
         <input
@@ -128,7 +125,24 @@ export default function Form() {
           onChange={handleChange}
         ></textarea>
         {errors.moreDetails && <p>{errors.moreDetails}</p>}
-        <input type="submit" value="Enviar" />
+        <input
+          type="submit"
+          value="Enviar"
+          disabled={
+            Object.keys(errors).length ||
+            errors.shipment ||
+            errors.origenCity ||
+            errors.destineCity ||
+            errors.name ||
+            errors.cellphone ||
+            errors.email ||
+            errors.weight ||
+            errors.measure ||
+            errors.value ||
+            errors.homeAdress ||
+            errors.moreDetails
+          }
+        />
       </form>
     </div>
   );
