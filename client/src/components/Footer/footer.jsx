@@ -32,7 +32,7 @@ export default function Footer() {
                 <a>Graciela</a>
                 <a href="https://api.whatsapp.com/send?phone=2995937729">
                   <BsFillTelephoneFill size="12px" />
-                  <AiOutlineWhatsApp size="14px" />
+                  <AiOutlineWhatsApp size="14.5px" />
                   299 5937729
                 </a>
               </li>
@@ -40,7 +40,7 @@ export default function Footer() {
                 <a>Yoni</a>
                 <a href="https://api.whatsapp.com/send?phone=2995124657">
                   <BsFillTelephoneFill size="12px" />
-                  <AiOutlineWhatsApp size="14px" />
+                  <AiOutlineWhatsApp size="14.5px" />
                   299 5124657
                 </a>
               </li>
@@ -48,7 +48,7 @@ export default function Footer() {
                 <a>Alejandro</a>
                 <a href="https://api.whatsapp.com/send?phone=2994127567">
                   <BsFillTelephoneFill size="12px" />
-                  <AiOutlineWhatsApp size="14px" />
+                  <AiOutlineWhatsApp size="14.5px" />
                   299 4127567
                 </a>
               </li>
