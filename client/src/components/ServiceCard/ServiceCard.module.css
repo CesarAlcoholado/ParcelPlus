@@ -11,10 +11,20 @@
   margin: 0 30px;
   border: 1px solid #c0c0c0;
   background-color: #f6f6f6;
+  border-radius: 3px;
 }
 
 .title{
   font-size: 16px;
   font-family: inherit;
   height: 70px;
+}
+
+@media (max-width: 990px){
+  .card {
+    width: 200px;
+    height: 250px;
+    margin-top: 30px
+
+  }
 }
