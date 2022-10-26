@@ -2,6 +2,7 @@
 .titleContainer{
   width: 100vw;
   background-color: #FFFDFA;
+  margin-bottom: 50px;
 }
 .cardsContainer {
   display: flex;
@@ -15,8 +16,8 @@
 .ourServices {
   display:inline-block;
   padding-top: 50px;
-  border-top: 1px solid #2b2b2b;
   font-family: inherit;
+  font-size: 40px;
   margin-top: 50px;
   width: 80vw;
 }
