@@ -1,0 +1,36 @@
+
+.OurfloatContainer{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  height: 70vh;
+  margin: 150px auto;
+  background: url(../../static/assets/polygon-orange-background.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  filter: brightness(90%)
+}
+
+.vehiclesImage{
+  width: 50%;
+  height: 100%;
+}
+
+.infoContainer{
+  position: relative;
+  width: 50%;
+}
+
+.title {
+  font-size: 50px;
+  color: #f4f4f4;
+}
+
+.description{
+  margin: 100px 0;
+  font-family: inherit;
+  font-size: 30px;
+}
