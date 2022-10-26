@@ -10,7 +10,7 @@ export default function Hero() {
         <button type="button" className={styles.heroButton}>
           Solicitá ya! <IoMdArrowDropright size="30px" />
         </button>
-        <h2 className={styles.heroSubtitle}>NOSOTROS NOS ENCARGAMOS!</h2>
+        <h2 className={styles.heroSubtitle}>NOSOTROS NOS ENCARGAMOS.</h2>
       </div>
     </section>
   );
