@@ -78,17 +78,18 @@
   font-family: inherit;
   font-weight: 200;
   cursor: pointer;
-  color: #FF4D0B;
+  color: #f4f4f4;
   border-radius: 4px;
   display: inline-flex;
   align-items: center;
   white-space: nowrap;
+  background-color: #FF4D0B;
 }
 
 .heroButton:hover {
-  color: #f4f4f4;
+  color: #FF4D0B;
   border-color: #ff8255;
-  background-color: #FF4D0B;
+  background-color: #f4f4f4;
 }
 
 .heroSubtitle {
