@@ -3,21 +3,21 @@
   height: auto;
   margin: auto;
   overflow: hidden;
-  background-color: red;
 }
 .slide_track {
-  background-color: yellow;
   display: flex;
   animation: scroll 120s linear infinite;
   width: calc(515px * 6);
 }
 .slide {
-  background-color: green;
   width: 200px;
   margin-right: 315px;
 }
 .slide a {
   margin-left: 20px;
+}
+.number {
+  margin-right: 5px;
 }
 
 @keyframes scroll {
