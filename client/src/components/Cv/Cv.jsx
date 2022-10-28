@@ -109,14 +109,14 @@ export default function Cv() {
           onChange={handleChange}
         />
         {errors.car_model && <p>{errors.car_model}</p>}
-        <label>Tiene licencia?*</label>
+        <label>Posee licencia?*</label>
         <select name="license" value={form.license} onChange={handleChange}>
           <option value="0">Seleccione una opción</option>
           <option value="Si">Sí</option>
           <option value="No">No</option>
         </select>
         {errors.license && <p>{errors.license}</p>}
-        <label>Su póliza astá al dia?*</label>
+        <label>Su póliza está al dia?*</label>
         <select name="policy" value={form.policy} onChange={handleChange}>
           <option value="0">Seleccione una opción</option>
           <option value="Si">Sí</option>
