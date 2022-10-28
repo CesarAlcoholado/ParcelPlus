@@ -1,0 +1,34 @@
+.slider {
+  width: 75vw;
+  height: auto;
+  margin: auto;
+  overflow: hidden;
+  background-color: red;
+}
+.slider .slide_track {
+  background-color: yellow;
+  display: flex;
+  animation: scroll 40s linear infinite;
+  -webkit-animation: scroll 40s linear infinite;
+  width: calc(200px * 6);
+}
+.slider .slide {
+  width: 200px;
+}
+.slider .slide div{
+    width: 100%;
+  }
+.slide a {
+  margin-left: 20px;
+}
+
+@keyframes scroll{
+    0% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(calc(-200px * 3));
+      transform: translateX(calc(200px * 3));
+    }
+  }
