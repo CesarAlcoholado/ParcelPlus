@@ -1,6 +1,7 @@
 import React from "react";
 import { useForm } from "../../static/utils/hooks/useForm";
 import { cvType } from "../../static/constants";
+import style
 
 const initialCv = {
   name: "",
@@ -18,7 +19,6 @@ const initialCv = {
   holder: "",
 };
 
-
 export default function Cv() {
   const { form, errors, handleChange, handleSubmit } = useForm(
     initialCv,
@@ -26,7 +26,7 @@ export default function Cv() {
   );
 
   return (
-    <div>
+    <div className="container">
       <form noValidate onSubmit={handleSubmit}>
         <label>Nombre y Apellido*</label>
         <input
