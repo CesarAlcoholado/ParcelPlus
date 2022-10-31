@@ -5,6 +5,7 @@ import { GrInstagram } from "react-icons/gr";
 import { FaLinkedinIn } from "react-icons/fa";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { AiOutlineWhatsApp } from "react-icons/ai";
+import logo from "./1.png"
 
 export default function Footer() {
   return (
@@ -73,6 +74,9 @@ export default function Footer() {
                 </a>
               </li>
             </ul>
+          </div>
+          <div className={styles.footer_col}>
+            <img src={logo} alt="logo" height={180} width={180}/>
           </div>
         </div>
       </div>
