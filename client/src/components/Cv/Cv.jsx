@@ -154,7 +154,7 @@ const Cv = ({ open, onClose }) => {
             }
           />
         </form>
-        <button onClick={onClose} className={styles.close}>
+        <button onClick={onClose} className={styles.open}>
           ENVIAR
         </button>
         <button onClick={onClose} className={styles.close}>
