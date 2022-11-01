@@ -3,6 +3,9 @@ import styles from "./footer.module.css";
 import { BsFacebook } from "react-icons/bs";
 import { GrInstagram } from "react-icons/gr";
 import { FaLinkedinIn } from "react-icons/fa";
+import { BsFillTelephoneFill } from "react-icons/bs";
+import { AiOutlineWhatsApp } from "react-icons/ai";
+import logo from "./1.png"
 
 export default function Footer() {
   return (
@@ -24,10 +27,31 @@ export default function Footer() {
             </ul>
           </div>
           <div className={styles.footer_col}>
-            <h4>Ayuda</h4>
+            <h4>Contáctenos</h4>
             <ul>
               <li>
-                <a href="#"></a>
+                <div className={styles.contact}>Graciela</div>
+                <a href="https://api.whatsapp.com/send?phone=2995937729">
+                  <BsFillTelephoneFill size="12px" />
+                  <AiOutlineWhatsApp size="14.5px" className={styles.number} />
+                  299 5937729
+                </a>
+              </li>
+              <li>
+                <div className={styles.contact}>Yoni</div>
+                <a href="https://api.whatsapp.com/send?phone=2995124657">
+                  <BsFillTelephoneFill size="12px" />
+                  <AiOutlineWhatsApp size="14.5px" className={styles.number} />
+                  299 5124657
+                </a>
+              </li>
+              <li>
+                <div className={styles.contact}>Alejandro</div>
+                <a href="https://api.whatsapp.com/send?phone=2994127567">
+                  <BsFillTelephoneFill size="12px" />
+                  <AiOutlineWhatsApp size="14.5px" className={styles.number} />
+                  299 4127567
+                </a>
               </li>
             </ul>
           </div>
@@ -50,6 +74,9 @@ export default function Footer() {
                 </a>
               </li>
             </ul>
+          </div>
+          <div className={styles.footer_col}>
+            <img src={logo} alt="logo" height={180} width={180}/>
           </div>
         </div>
       </div>
