@@ -2,6 +2,7 @@ import React from "react";
 import { ciudadOrigen, ciudadDestino } from "../../static/constants";
 import { useForm } from "../../static/utils/hooks/useForm";
 import { packageType } from "../../static/constants";
+import FormInfo from "../Form info/FormInfo";
 import styles from "./Form.module.css";
 
 const initialForm = {
@@ -26,13 +27,15 @@ export default function Form() {
 
   return (
     <div className={styles.formContainer}>
+      <FormInfo />
       <form
         className={styles.form}
         id="quotation"
         onSubmit={handleSubmit}
         noValidate
       >
-        <div className={`${styles.formContainer} ${styles.packageInfo}`}>
+        <div className={`${styles.packageInfo} ${styles.flexContainer}`}>
+          <h1>Datos de envio</h1>
           <label className={styles.labels}>Seleccione un tipo de envio*</label>
           <select
             className={styles.inputField}
@@ -131,7 +134,8 @@ export default function Form() {
             <p className={styles.error}>{errors.moreDetails}</p>
           )}
         </div>
-        <div className={`${styles.formContainer} ${styles.userInfo}`}>
+        <div className={`${styles.userInfo} ${styles.flexContainer}`}>
+          <h1>Tus datos</h1>
           <label className={styles.labels}>Nombre*</label>
           <input
             className={styles.inputField}
@@ -186,11 +190,11 @@ export default function Form() {
           {errors.cellphone && (
             <p className={styles.error}>{errors.cellphone}</p>
           )}
-        <input
-          className={styles.submitButton}
-          type="submit"
-          value="Solicitar presupuesto"
-        />
+          <input
+            className={styles.submitButton}
+            type="submit"
+            value="Solicitar presupuesto"
+          />
         </div>
       </form>
     </div>

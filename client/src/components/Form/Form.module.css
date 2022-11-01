@@ -1,30 +1,43 @@
 .formContainer {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   width: auto;
-  align-items: flex-start;
   margin: 3em;
   box-sizing: border-box;
+}
+
+.flexContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  height: 100%;
+  min-width: 320px;
 }
 
 .form {
   display: flex;
   justify-content: center;
-  width: 80vw;
-  height: 100%;
+  width: auto;
+  height: 80vh;
 }
 
 .packageInfo{
-  height: 100%;
+  padding: 0 2em;
 }
 
 .userInfo {
   border-left: 1px solid #c0c0c0;
-  padding: 0 3em;
+  padding: 0 2em;
+  justify-content: flex-start;
+}
+
+.labels {
+  margin-top: 13px;
 }
 
 .inputField {
-  width: 345px;
+  width: 100%;
   height: 32px;
   border-radius: 5px;
   margin: 0.5em 0;
@@ -54,7 +67,7 @@
 .description {
   font-family: inherit;
   border-radius: 5px;
-  width: 345px;
+  width: 100%;
   margin: 0.5em 0;
   padding: 6px 12px;
   outline: none;
@@ -64,7 +77,6 @@
 }
 
 .submitButton {
-  /* margin-top: 5rem; */
   border: 1px solid #ff8255;
   padding: 0.9375rem 1.875rem;
   font-size: 1.125rem;
@@ -78,6 +90,7 @@
   white-space: nowrap;
   background-color: #ff4d0b;
   margin-top: auto;
+  margin-bottom: 8px;
 }
 
 .submitButton:hover {
