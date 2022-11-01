@@ -9,7 +9,7 @@ export default function Vehicles() {
         <div className={styles.infoContainer}>
           <h1 className={styles.title}>Nuestra Flota</h1>
           <p className={styles.description}>
-            Contamos con 11 unidades modernas y en excelentes condiciones
+            Contamos con unidades modernas y en excelentes condiciones
           </p>
         </div>
         <img
