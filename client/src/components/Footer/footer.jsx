@@ -13,7 +13,7 @@ export default function Footer() {
             <h4>Compañia</h4>
             <ul>
               <li>
-                <a href="#">Acerda de </a>
+                <a href="#">Acerca de </a>
               </li>
               <li>
                 <a href="#">Nuestros servicios</a>

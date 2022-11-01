@@ -14,6 +14,15 @@ export const useForm = (initialForm, type) => {
     });
   };
 
+  const handleBlur = (e)=>{
+    handleChange(e);
+    if (type === "packageForm") {
+      setErrors(validate(form));
+    } else if (type === "cvForm") {
+      setErrors(cvValidation(form));
+    }
+  }
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if(type === "packageForm"){
@@ -21,12 +30,15 @@ export const useForm = (initialForm, type) => {
     } else  if (type === "cvForm"){
       setErrors(cvValidation(form))
     }
+    if (Object.keys(errors).length) return;
+    console.log(form);
   };
 
   return {
     form,
     errors,
     handleChange,
-    handleSubmit
+    handleSubmit,
+    handleBlur
   }
 };
