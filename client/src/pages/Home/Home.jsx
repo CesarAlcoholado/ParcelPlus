@@ -5,6 +5,7 @@ import Hero from '../../components/Hero/Hero.jsx'
 import ServicesSection from '../../components/ServicesSection/ServicesSection.jsx';
 import Route from '../../components/Route/Route.jsx';
 import Vehicles from '../../components/Vehicles/Vehicles.jsx';
+import Footer from '../../components/Footer/Footer.jsx';
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <Route/>
       <Vehicles/>
       <Form/>
+      <Footer/>
     </div>
   )
 }
