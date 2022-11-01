@@ -9,11 +9,12 @@
   margin: 0 auto;
   padding: 60px;
   height: 16em;
+  overflow: hidden;
 }
 
 .routeContainer::before {
   content: "";
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -22,8 +23,10 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  background-attachment: fixed;
-  filter: brightness(80%)
+  background-color: white;
+  will-change: transform;
+  filter: brightness(80%);
+  z-index: -9;
 }
 
 .alcance, .h3 {
