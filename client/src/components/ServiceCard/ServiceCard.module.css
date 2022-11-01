@@ -7,17 +7,17 @@
   width: 600px;
   height: 300px;
   padding: 20px;
-  padding-top: 50px;
   margin: 0 30px;
   border: 1px solid #c0c0c0;
   background-color: #f6f6f6;
   border-radius: 3px;
+  box-sizing: border-box;
 }
 
 .title{
   font-size: 16px;
   font-family: inherit;
-  height: 70px;
+  height: 50%
 }
 
 @media (max-width: 990px){
