@@ -7,12 +7,14 @@ import ServicesSection from '../../components/ServicesSection/ServicesSection.js
 import Route from '../../components/Route/Route.jsx';
 import Vehicles from '../../components/Vehicles/Vehicles.jsx';
 import Footer from '../../components/Footer/Footer.jsx';
+import Contact from '../../components/Contact/Contact.jsx'
 
 export default function Home() {
   return (
     <div>
       <NavBar/>
       <Hero/>
+      <Contact/>
       <ServicesSection/>
       <Route/>
       <Vehicles/>
