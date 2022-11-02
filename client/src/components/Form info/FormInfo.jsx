@@ -9,10 +9,10 @@ export default function FormInfo() {
   return (
     <div className={styles.infoContainer}>
       <div>
-      <h1 className={styles.title}>Solicitá tu envio ahora</h1>
-      <p className={styles.contact}>
-        Completá estos datos y nos pondremos en contacto.
-      </p>
+        <h1 className={styles.title}>Solicitá tu envio ahora</h1>
+        <p className={styles.contact}>
+          Completá estos datos y nos pondremos en contacto.
+        </p>
       </div>
       <div className={styles.formCardsContainer}>
         <div className={styles.formCard}>
@@ -32,7 +32,7 @@ export default function FormInfo() {
           <h2 className={styles.subtitle}>Seguro</h2>
         </div>
       </div>
-        <h3 className={styles.h3}>nosotros te asesoramos.</h3>
+      <h3 className={styles.h3}>nosotros te asesoramos.</h3>
     </div>
   );
 }

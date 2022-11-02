@@ -35,7 +35,7 @@ export default function Form() {
         noValidate
       >
         <div className={`${styles.packageInfo} ${styles.flexContainer}`}>
-          <h1>Datos de envio</h1>
+          <h1 className={styles.formTitle}>Datos de envio</h1>
           <label className={styles.labels}>Seleccione un tipo de envio*</label>
           <select
             className={styles.inputField}
