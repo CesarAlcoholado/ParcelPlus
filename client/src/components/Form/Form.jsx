@@ -135,7 +135,7 @@ export default function Form() {
           )}
         </div>
         <div className={`${styles.userInfo} ${styles.flexContainer}`}>
-          <h1>Tus datos</h1>
+          <h1 className={styles.formTitle}>Tus datos</h1>
           <label className={styles.labels}>Nombre*</label>
           <input
             className={styles.inputField}
