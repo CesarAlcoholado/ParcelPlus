@@ -5,7 +5,7 @@ import { CgClose } from "react-icons/cg";
 import styles from "./NavBar.module.css";
 
 export default function MobileNavigation() {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
 
   const burguerIcon = (
     <IoMdMenu

@@ -1,0 +1,144 @@
+.formContainer {
+  display: flex;
+  justify-content: center;
+  width: auto;
+  background-color: #FFFDFA;
+  margin: 2em;
+  box-sizing: border-box;
+}
+
+.flexContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  height: 100%;
+  min-width: 20em;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  width: auto;
+  height: 80vh;
+}
+
+.packageInfo{
+  padding: 0 2em;
+}
+
+.userInfo {
+  border-left: 1px solid #c0c0c0;
+  padding: 0 2em;
+  justify-content: flex-start;
+}
+
+.labels {
+  margin-top: 0.81em;
+}
+
+.inputField {
+  width: 100%;
+  height: 2.5em;
+  border-radius: 5px;
+  margin: 0.5em 0;
+  padding: 0.37em 0.75em;
+  background-color: #f6f6f6;
+  border: 1px solid #c0c0c0;
+  font-family: inherit;
+}
+.cellphoneInput {
+  width: 14.37em;
+  font-family: inherit;
+}
+
+.packageSize {
+  width: 7.18em;
+  font-family: inherit;
+}
+
+.error {
+  font-size: 11px;
+  color: #fd3535;
+  margin: 0.36em 0;
+  padding: 0;
+  font-family: inherit;
+}
+
+.description {
+  font-family: inherit;
+  border-radius: 5px;
+  width: 100%;
+  margin: 0.5em 0;
+  padding: 0.37em 0.75em;
+  outline: none;
+  resize: none;
+  background-color: #f6f6f6;
+  border: 1px solid #c0c0c0;
+}
+
+.submitButton {
+  border: 1px solid #ff8255;
+  padding: 0.9375rem 1.875rem;
+  font-size: 1.125rem;
+  font-family: inherit;
+  font-weight: 200;
+  cursor: pointer;
+  color: #f4f4f4;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  background-color: #ff4d0b;
+  margin-top: auto;
+  margin-bottom: 8px;
+}
+
+.submitButton:hover {
+  color: #ff4d0b;
+  border-color: #ff8255;
+  background-color: #f4f4f4;
+}
+
+@media (max-width: 990px){
+.formContainer {
+  font-size: 12px;
+  flex-direction: column;
+}
+
+.form {
+  margin-top: 50px;
+  display:inline-block;
+  height: auto;
+}
+
+.userInfo {
+  margin-top: 25px;
+  border: none
+}
+
+.labels {
+  margin-top: 0.55em;
+}
+
+.inputField {
+  width: 50%;
+}
+
+.error {
+  font-size: 10px;
+}
+
+.description {
+  width: 50%;
+}
+
+.cellphoneInput {
+  margin-bottom: 20px;
+}
+
+.submitButton {
+  font-size: 11px;
+}
+
+}
