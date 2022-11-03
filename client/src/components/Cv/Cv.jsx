@@ -18,9 +18,8 @@ const initialCv = {
   holder: "",
 };
 
-
 export default function Cv() {
-  const { form, errors, handleChange, handleSubmit } = useForm(
+  const { form, errors, handleChange, handleSubmit, handleBlur } = useForm(
     initialCv,
     cvType
   );
@@ -34,6 +33,7 @@ export default function Cv() {
           name="name"
           value={form.name}
           onChange={handleChange}
+          onBlur={handleBlur}
         />
         {errors.name && <p>{errors.name}</p>}
         <label>Edad* (debes ser mayor a 18 años)</label>
@@ -42,6 +42,7 @@ export default function Cv() {
           name="age"
           value={form.age}
           onChange={handleChange}
+          onBlur={handleBlur}
         />
         {errors.age && <p>{errors.age}</p>}
         <label>Provincia*</label>
@@ -50,6 +51,7 @@ export default function Cv() {
           name="region"
           value={form.region}
           onChange={handleChange}
+          onBlur={handleBlur}
         />
         {errors.region && <p>{errors.region}</p>}
         <label>Ciudad*</label>
@@ -58,6 +60,7 @@ export default function Cv() {
           name="city"
           value={form.city}
           onChange={handleChange}
+          onBlur={handleBlur}
         />
         {errors.city && <p>{errors.city}</p>}
         <label>Domicilio*</label>
@@ -66,6 +69,7 @@ export default function Cv() {
           name="homeAdress"
           value={form.homeAdress}
           onChange={handleChange}
+          onBlur={handleBlur}
         />
         {errors.homeAdress && <p>{errors.homeAdress}</p>}
         <label>Email*</label>
@@ -74,6 +78,7 @@ export default function Cv() {
           name="email"
           value={form.email}
           onChange={handleChange}
+          onBlur={handleBlur}
         />
         {errors.email && <p>{errors.email}</p>}
         <label>Celular*</label>
@@ -82,10 +87,16 @@ export default function Cv() {
           name="cellphone"
           value={form.cellphone}
           onChange={handleChange}
+          onBlur={handleBlur}
         />
         {errors.cellphone && <p>{errors.cellphone}</p>}
         <label>Tipo de vehiculo utilitario*</label>
-        <select name="car_type" value={form.car_type} onChange={handleChange}>
+        <select
+          name="car_type"
+          value={form.car_type}
+          onChange={handleChange}
+          onBlur={handleBlur}
+        >
           <option value="0">Seleccione una opción</option>
           <option value="Auto">Auto</option>
           <option value="Camioneta">Camioneta</option>
@@ -99,6 +110,7 @@ export default function Cv() {
           name="car_brand"
           value={form.car_brand}
           onChange={handleChange}
+          onBlur={handleBlur}
         />
         {errors.car_brand && <p>{errors.car_brand}</p>}
         <label>Modelo del vehiculo*</label>
@@ -107,24 +119,40 @@ export default function Cv() {
           name="car_model"
           value={form.car_model}
           onChange={handleChange}
+          onBlur={handleBlur}
         />
         {errors.car_model && <p>{errors.car_model}</p>}
         <label>Tiene licencia?*</label>
-        <select name="license" value={form.license} onChange={handleChange}>
+        <select
+          name="license"
+          value={form.license}
+          onChange={handleChange}
+          onBlur={handleBlur}
+        >
           <option value="0">Seleccione una opción</option>
           <option value="Si">Sí</option>
           <option value="No">No</option>
         </select>
         {errors.license && <p>{errors.license}</p>}
         <label>Su póliza astá al dia?*</label>
-        <select name="policy" value={form.policy} onChange={handleChange}>
+        <select
+          name="policy"
+          value={form.policy}
+          onChange={handleChange}
+          onBlur={handleBlur}
+        >
           <option value="0">Seleccione una opción</option>
           <option value="Si">Sí</option>
           <option value="No">No</option>
         </select>
         {errors.policy && <p>{errors.policy}</p>}
         <label>Es titular?*</label>
-        <select name="holder" value={form.holder} onChange={handleChange}>
+        <select
+          name="holder"
+          value={form.holder}
+          onChange={handleChange}
+          onBlur={handleBlur}
+        >
           <option value="0">Seleccione una opción</option>
           <option value="Si">Sí</option>
           <option value="No">No</option>
@@ -133,22 +161,6 @@ export default function Cv() {
         <input
           type="submit"
           value="Enviar"
-          disabled={
-            Object.keys(errors).length ||
-            errors.name ||
-            errors.age ||
-            errors.region ||
-            errors.city ||
-            errors.homeAdress ||
-            errors.email ||
-            errors.cellphone ||
-            errors.car_type ||
-            errors.car_brand ||
-            errors.car_model ||
-            errors.license ||
-            errors.policy ||
-            errors.holder
-          }
         />
       </form>
     </div>
