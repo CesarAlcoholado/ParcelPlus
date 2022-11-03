@@ -7,7 +7,7 @@ import styles from './NavBar.module.css';
 export default function NavBar() {
   return (
     <div className={styles.NavBar}>
-      <img src={Logo} alt="ParcelPlusLogo" style={{"width": "60px", "margin-right":"auto"}}/>
+      <img src={Logo} alt="ParcelPlusLogo" style={{"width": "50px", "height": "50px", "margin-right":"auto"}}/>
      <Navigation/> 
      <MobileNavigation/>
     </div>

@@ -7,6 +7,7 @@ import Route from '../../components/Route/Route.jsx';
 import Vehicles from '../../components/Vehicles/Vehicles.jsx';
 import Footer from '../../components/Footer/Footer.jsx';
 import Contact from '../../components/Contact/Contact.jsx'
+import Modal from '../../components/Modal/Modal.jsx'
 
 export default function Home() {
   
@@ -19,6 +20,7 @@ export default function Home() {
       <Route/>
       <Vehicles/>
       <Form/>
+      <Modal/>
       <Footer/>
     </div>
   );

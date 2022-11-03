@@ -29,12 +29,14 @@ export default function Cv({ open, onClose }) {
     );
 
     if (!open) return null;
+
     function todos() {
       onClose();
       notify();
     }
     return (
     <div className={styles.container}>
+      {console.log('perrito malvado')}
       <div className={styles.content}>
       <form noValidate onSubmit={handleSubmit}>
         <label>Nombre y Apellido*</label>
