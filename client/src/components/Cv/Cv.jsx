@@ -1,6 +1,8 @@
 import React from "react";
 import { useForm } from "../../static/utils/hooks/useForm";
 import { cvType } from "../../static/constants";
+import styles from "./Cv.module.css";
+import toast, { Toaster } from "react-hot-toast";
 
 const initialCv = {
   name: "",
@@ -18,14 +20,22 @@ const initialCv = {
   holder: "",
 };
 
-export default function Cv() {
+const notify = () => toast.success("Formulario enviado con éxito!");
+
+export default function Cv({ open, onClose }) {
   const { form, errors, handleChange, handleSubmit, handleBlur } = useForm(
     initialCv,
     cvType
-  );
+    );
 
-  return (
-    <div>
+    if (!open) return null;
+    function todos() {
+      onClose();
+      notify();
+    }
+    return (
+    <div className={styles.container}>
+      <div className={styles.content}>
       <form noValidate onSubmit={handleSubmit}>
         <label>Nombre y Apellido*</label>
         <input
@@ -163,6 +173,23 @@ export default function Cv() {
           value="Enviar"
         />
       </form>
+      <button onClick={todos} className={styles.open}>
+          ENVIAR
+        </button>
+        <button onClick={onClose} className={styles.close}>
+          CERRAR
+        </button>
+        </div>
+        <Toaster
+          toastOptions={{
+            duration: 5000,
+            style: {
+              background: "#363636",
+              color: "#fff",
+            },
+          }}
+        />
     </div>
+    
   );
-}
+};

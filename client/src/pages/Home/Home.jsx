@@ -1,4 +1,3 @@
-
 import React from 'react';
 import NavBar from '../../components/NavBar/NavBar.jsx';
 import Form from '../../components/Form/Form.jsx';
@@ -10,6 +9,7 @@ import Footer from '../../components/Footer/Footer.jsx';
 import Contact from '../../components/Contact/Contact.jsx'
 
 export default function Home() {
+  
   return (
     <div>
       <NavBar/>
