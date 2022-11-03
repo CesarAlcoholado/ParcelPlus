@@ -1,0 +1,34 @@
+
+.titleContainer{
+  width: 100vw;
+  background-color: #FFFDFA;
+  margin-bottom: 50px;
+}
+.cardsContainer {
+  display: flex;
+  justify-content: center;
+  width: 85vw;
+  height: auto;
+  margin: 0 auto;
+  padding: 80px;
+}
+
+.ourServices {
+  display:inline-block;
+  padding-top: 50px;
+  font-family: inherit;
+  font-size: 40px;
+  margin-top: 50px;
+  width: 80vw;
+}
+
+@media (max-width: 990px){
+
+  .cardsContainer{
+    flex-direction: column;
+    width: 100vw;
+    align-items: center;
+    padding: 40px
+  }
+
+}

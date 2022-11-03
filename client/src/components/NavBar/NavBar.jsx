@@ -1,7 +1,15 @@
 import React from 'react'
+import MobileNavigation from './MobileNavigation';
+import Navigation from './Navigation';
+import Logo from '../../static/assets/Logo.png'
+import styles from './NavBar.module.css';
 
 export default function NavBar() {
   return (
-    <div>NavBar</div>
-  )
+    <div className={styles.NavBar}>
+      <img src={Logo} alt="ParcelPlusLogo" style={{"width": "60px", "margin-right":"auto"}}/>
+     <Navigation/> 
+     <MobileNavigation/>
+    </div>
+  );
 }

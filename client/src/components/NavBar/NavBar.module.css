@@ -1,0 +1,71 @@
+*{
+  box-sizing: border-box;
+}
+.NavBar{
+  height: 80px;
+  background-color: #181818;
+  width: 100%;
+  position: fixed;
+  padding: 20px;
+  z-index: 999;
+  opacity: 0.9;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.NavBar ul li {
+  display: inline-block;
+  height: 30px;
+  margin: 2vw;
+}
+
+.NavBar ul li {
+  text-decoration: none;
+  color: #FFFFFF
+}
+
+.NavBar li:hover {
+  border-bottom: 3px solid #FF4D0B;
+}
+
+.NavBar .MobileNavigation {
+  display: none;
+}
+
+@media (max-width: 990px){
+  .NavBar .Navigation {
+    display: none;
+  }
+
+  .NavBar {
+    height: 60px;
+  }
+
+  .NavBar .MobileNavigation {
+    display: flex;
+    align-items: center;
+    height: 56px;
+    
+  }
+
+  .NavBar .MobileNavigation .burguer {
+    position: absolute;
+    right: 4%;
+    cursor: pointer;
+  }
+
+  .NavBar nav ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 100%;
+    padding: 0;
+    background-color: #181818;
+    border-top: 2px solid white;
+    justify-content: center;
+  } 
+
+}

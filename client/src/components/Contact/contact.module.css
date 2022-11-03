@@ -1,0 +1,38 @@
+.slider {
+  width: 100vw;
+  height: auto;
+  margin: auto;
+  overflow: hidden;
+  color:#f6f6f6;
+  background-color: #2b2b2b;
+}
+.slide_track {
+  display: flex;
+  animation: scroll 120s linear infinite;
+  width: calc(515px * 6);
+  background-color: #2b2b2b;
+}
+.slide {
+  width: 550px;
+}
+.slide a {
+  margin-left: 20px;
+}
+.number {
+  margin-right: 5px;
+
+}
+
+.slide, .slide > a, .number {
+ text-decoration: none;
+ color: #FF4D0B
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-515px * 3));
+  }
+}
