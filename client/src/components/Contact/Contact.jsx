@@ -5,7 +5,7 @@ import { AiOutlineWhatsApp } from "react-icons/ai";
 export default function Footer() {
   return (
     <div className={styles.slider}>
-      Contáctanos!
+      Contactanos!
       <div className={styles.slide_track}>
         <div className={styles.slide}>
           Alejandro
@@ -37,13 +37,12 @@ export default function Footer() {
           </a>
         </div>
         <div className={styles.slide}>
-          <div>
             Graciela
             <a href="https://api.whatsapp.com/send?phone=2995124657">
             <AiOutlineWhatsApp size="14px" className={styles.number} />
               299 5937729
             </a>
-          </div>
+
         </div>
         <div className={styles.slide}>
           Yoni
