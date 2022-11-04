@@ -1,0 +1,80 @@
+
+.aboutSection{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.aboutTitle {
+  font-size: 60px;
+}
+
+.aboutSubtitle {
+  font-size: 20px;
+}
+
+
+.aboutCardsContainer{
+  display: flex;
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.aboutCard{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+  height: 100%;
+  width: 400px;
+  color: #f6f6f6 ;
+  font-size: 14px;
+  border-radius: 5px;
+  background-color: #2b2b2b;
+  border: 1px solid #ff4d0b;
+  background-image: url(../../static/assets/layered-waves-haikei.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.headline {
+  display: flex;
+  height: 60px;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
+
+.cardTitle {
+  font-size: 35px;
+  color: #ff4d0b
+}
+
+.description {
+  display: inline-block;
+  width: 60%
+}
+
+.description, .valuesList, .valueItem {
+  text-align: left;
+}
+
+.valuesList {
+  list-style:none;
+  text-decoration: none;
+}
+
+.valueItem {
+  text-align: center;
+}
+
