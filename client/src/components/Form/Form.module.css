@@ -1,9 +1,9 @@
 .formContainer {
   display: flex;
   justify-content: center;
-  width: auto;
+  width: 80vw;
   background-color: #FFFDFA;
-  margin: 2em;
+  margin: 9em auto;
   box-sizing: border-box;
 }
 

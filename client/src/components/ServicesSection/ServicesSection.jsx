@@ -30,7 +30,7 @@ export default function ServicesSection() {
           image={eCommerce}
         />
         <ServiceCard
-          title={"Despacho y traslado de productos y/o bienes"}
+          title={"Despacho y traslado"}
           icon={<TbTruckDelivery size="90px" />}
           image={truck}
         />
