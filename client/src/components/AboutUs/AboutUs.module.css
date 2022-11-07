@@ -32,9 +32,10 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding: 20px;
+  padding: 1.42em;
   height: 100%;
-  width: 400px;
+  width: 30%;
+  max-width: 27.14em;
   color: #f6f6f6 ;
   font-size: 14px;
   border-radius: 5px;
@@ -79,3 +80,44 @@
   text-align: center;
 }
 
+@media (max-width: 990px) {
+
+  .aboutSection {
+    justify-content: center;
+    height: auto;
+  }
+
+  .aboutCardsContainer {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: auto;
+  }
+  
+  .aboutCard{
+    font-size: 13px;
+    height: 35.07em;
+    margin: 2em;
+    min-width: 19.23em;
+    justify-content: space-around;
+  }
+
+  .aboutTitle {
+    font-size: 50px;
+    margin-top: 40px;
+  }
+
+  .aboutSubtitle {
+    margin-top: 35px;
+  font-size: 15px;
+  }
+
+  .headline {
+    margin-bottom: 40px;
+  }
+
+  .cardTitle {
+    font-size: 25px;
+  }
+
+}
