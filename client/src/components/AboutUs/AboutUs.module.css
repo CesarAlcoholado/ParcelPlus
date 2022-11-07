@@ -37,7 +37,7 @@
   width: 30%;
   max-width: 27.14em;
   color: #f6f6f6 ;
-  font-size: 14px;
+  font-size: 15px;
   border-radius: 5px;
   background-color: #2b2b2b;
   border: 1px solid #ff4d0b;
@@ -95,8 +95,9 @@
   }
   
   .aboutCard{
-    font-size: 13px;
+    font-size: 14px;
     height: 35.07em;
+    max-width: 30em;
     margin: 2em;
     min-width: 19.23em;
     justify-content: space-around;
