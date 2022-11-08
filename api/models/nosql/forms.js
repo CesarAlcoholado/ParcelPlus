@@ -29,7 +29,7 @@ const FormScheme = new mongoose.Schema(
       type: Number,
     },
     measure: {
-      type: Number,
+      type: String,
     },
     value: {
       type: Number,
