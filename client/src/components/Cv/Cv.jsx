@@ -36,7 +36,6 @@ export default function Cv({ open, onClose }) {
     }
     return (
     <div className={styles.container}>
-      {console.log('perrito malvado')}
       <div className={styles.content}>
       <form noValidate onSubmit={handleSubmit}>
         <label>Nombre y Apellido*</label>

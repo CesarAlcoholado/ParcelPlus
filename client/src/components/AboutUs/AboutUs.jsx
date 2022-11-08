@@ -3,6 +3,7 @@ import styles from "./AboutUs.module.css";
 import vision from "../../static/assets/vision.png";
 import mision from "../../static/assets/mision.png";
 import values from "../../static/assets/values.png";
+import Modal from "../Modal/Modal";
 
 export default function AboutUs() {
   return (
@@ -53,12 +54,17 @@ export default function AboutUs() {
               <li className={styles.valueItem}>Innovación</li>
               <li className={styles.valueItem}>Trabajo en equipo</li>
               <li className={styles.valueItem}>Responsabilidad</li>
-              {/* <li className={styles.valueItem}>Predisposición</li>
-              <li className={styles.valueItem}>Cumplimiento</li> */}
             </ul>
           </div>
         </div>
       </div>
+      <h1 className={`${styles.workTitle} ${styles.left}`}>
+        Trabajá con nosotros.
+      </h1>
+      <h2 className={`${styles.workSubtitle} ${styles.left}`}>
+        Vos también podes formar parte de Parcel Plus.<br/>Si te interesa ser parte de nuestro equipo, completá este formulario
+      </h2>
+      <Modal/>
     </section>
   );
 }

@@ -6,8 +6,7 @@ import ServicesSection from '../../components/ServicesSection/ServicesSection.js
 import Route from '../../components/Route/Route.jsx';
 import Vehicles from '../../components/Vehicles/Vehicles.jsx';
 import Footer from '../../components/Footer/Footer.jsx';
-import Contact from '../../components/Contact/Contact.jsx'
-import Modal from '../../components/Modal/Modal.jsx'
+import Contact from '../../components/Contact/Contact.jsx';
 import AboutUs from '../../components/AboutUs/AboutUs.jsx';
 import JoinUs from '../../components/JoinUs/JoinUs.jsx';
 
@@ -24,7 +23,6 @@ export default function Home() {
       <Form/>
       <JoinUs/>
       <AboutUs/>
-      <Modal/>
       <Footer/>
     </div>
   );

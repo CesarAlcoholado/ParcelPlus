@@ -1,0 +1,28 @@
+
+.modal{
+  margin-right: auto;
+  margin-left: 10%;
+}
+
+.joinButton{
+  z-index: 999;
+  margin: 2rem 0;
+  border: 1px solid #ff8255;
+  padding: 0.550rem 1.875rem;
+  font-size: 1.520rem;
+  font-family: inherit;
+  font-weight: 200;
+  cursor: pointer;
+  color: #f4f4f4;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  background-color: #FF4D0B;
+}
+
+.joinButton:hover {
+  color: #FF4D0B;
+  border-color: #ff8255;
+  background-color: #f4f4f4;
+}
