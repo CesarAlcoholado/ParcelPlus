@@ -9,7 +9,7 @@ const validatorCreateItem = [
   check("email").notEmpty().isEmail(),
   check("destineCity").exists().notEmpty(),
   check("weight").exists().notEmpty().isNumeric(),
-  check("measure").exists().notEmpty().isNumeric(),
+  check("measure").exists().notEmpty().isString(),
   check("value").exists().notEmpty().isNumeric(),
   check("comment"),
   check("homeAdress").exists().notEmpty(),
