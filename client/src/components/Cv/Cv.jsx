@@ -25,172 +25,199 @@ const notify = () => toast.success("Formulario enviado con éxito!");
 export default function Cv({ open, onClose }) {
   const { form, errors, handleChange, handleSubmit, handleBlur } = useForm(
     initialCv,
-    cvType
-    );
+    cvType,
+    notify
+  );
 
-    if (!open) return null;
-
-    function todos() {
-      onClose();
-      notify();
-    }
-    return (
+  if (!open) return null;
+  
+  function todos() {
+    onClose();
+    notify();
+  }
+  return (
     <div className={styles.container}>
       <div className={styles.content}>
-      <form noValidate onSubmit={handleSubmit}>
-        <label>Nombre y Apellido*</label>
-        <input
-          type="text"
-          name="name"
-          value={form.name}
-          onChange={handleChange}
-          onBlur={handleBlur}
-        />
-        {errors.name && <p>{errors.name}</p>}
-        <label>Edad* (debes ser mayor a 18 años)</label>
-        <input
-          type="number"
-          name="age"
-          value={form.age}
-          onChange={handleChange}
-          onBlur={handleBlur}
-        />
-        {errors.age && <p>{errors.age}</p>}
-        <label>Provincia*</label>
-        <input
-          type="text"
-          name="region"
-          value={form.region}
-          onChange={handleChange}
-          onBlur={handleBlur}
-        />
-        {errors.region && <p>{errors.region}</p>}
-        <label>Ciudad*</label>
-        <input
-          type="text"
-          name="city"
-          value={form.city}
-          onChange={handleChange}
-          onBlur={handleBlur}
-        />
-        {errors.city && <p>{errors.city}</p>}
-        <label>Domicilio*</label>
-        <input
-          type="text"
-          name="homeAdress"
-          value={form.homeAdress}
-          onChange={handleChange}
-          onBlur={handleBlur}
-        />
-        {errors.homeAdress && <p>{errors.homeAdress}</p>}
-        <label>Email*</label>
-        <input
-          type="email"
-          name="email"
-          value={form.email}
-          onChange={handleChange}
-          onBlur={handleBlur}
-        />
-        {errors.email && <p>{errors.email}</p>}
-        <label>Celular*</label>
-        <input
-          type="number"
-          name="cellphone"
-          value={form.cellphone}
-          onChange={handleChange}
-          onBlur={handleBlur}
-        />
-        {errors.cellphone && <p>{errors.cellphone}</p>}
-        <label>Tipo de vehiculo utilitario*</label>
-        <select
-          name="car_type"
-          value={form.car_type}
-          onChange={handleChange}
-          onBlur={handleBlur}
-        >
-          <option value="0">Seleccione una opción</option>
-          <option value="Auto">Auto</option>
-          <option value="Camioneta">Camioneta</option>
-          <option value="Trafic">Tráfic</option>
-          <option value="Camion">Camión</option>
-        </select>
-        {errors.car_type && <p>{errors.car_type}</p>}
-        <label>Marca*</label>
-        <input
-          type="text"
-          name="car_brand"
-          value={form.car_brand}
-          onChange={handleChange}
-          onBlur={handleBlur}
-        />
-        {errors.car_brand && <p>{errors.car_brand}</p>}
-        <label>Modelo del vehiculo*</label>
-        <input
-          type="number"
-          name="car_model"
-          value={form.car_model}
-          onChange={handleChange}
-          onBlur={handleBlur}
-        />
-        {errors.car_model && <p>{errors.car_model}</p>}
-        <label>Tiene licencia?*</label>
-        <select
-          name="license"
-          value={form.license}
-          onChange={handleChange}
-          onBlur={handleBlur}
-        >
-          <option value="0">Seleccione una opción</option>
-          <option value="Si">Sí</option>
-          <option value="No">No</option>
-        </select>
-        {errors.license && <p>{errors.license}</p>}
-        <label>Su póliza astá al dia?*</label>
-        <select
-          name="policy"
-          value={form.policy}
-          onChange={handleChange}
-          onBlur={handleBlur}
-        >
-          <option value="0">Seleccione una opción</option>
-          <option value="Si">Sí</option>
-          <option value="No">No</option>
-        </select>
-        {errors.policy && <p>{errors.policy}</p>}
-        <label>Es titular?*</label>
-        <select
-          name="holder"
-          value={form.holder}
-          onChange={handleChange}
-          onBlur={handleBlur}
-        >
-          <option value="0">Seleccione una opción</option>
-          <option value="Si">Sí</option>
-          <option value="No">No</option>
-        </select>
-        {errors.holder && <p>{errors.holder}</p>}
-        <input
-          type="submit"
-          value="Enviar"
-        />
-      </form>
-      <button onClick={todos} className={styles.open}>
-          ENVIAR
-        </button>
-        <button onClick={onClose} className={styles.close}>
-          CERRAR
-        </button>
-        </div>
-        <Toaster
-          toastOptions={{
-            duration: 5000,
-            style: {
-              background: "#363636",
-              color: "#fff",
-            },
-          }}
-        />
+        <form className={styles.form} noValidate onSubmit={handleSubmit}>
+          <div className={styles.formContainer}>
+            <div className={styles.userData}>
+              <h1 className={styles.dataTitle}>Tus datos</h1>
+              <label className={styles.labels}>Nombre y Apellido*</label>
+              <input
+                className={styles.inputField}
+                type="text"
+                name="name"
+                value={form.name}
+                onChange={handleChange}
+                onBlur={handleBlur}
+              />
+              {errors.name && <p className={styles.error}>{errors.name}</p>}
+              <label className={styles.labels}>
+                Edad* (debes ser mayor a 18 años)
+              </label>
+              <input
+                className={styles.inputField}
+                type="number"
+                name="age"
+                value={form.age}
+                onChange={handleChange}
+                onBlur={handleBlur}
+              />
+              {errors.age && <p className={styles.error}>{errors.age}</p>}
+              <label className={styles.labels}>Provincia*</label>
+              <input
+                className={styles.inputField}
+                type="text"
+                name="region"
+                value={form.region}
+                onChange={handleChange}
+                onBlur={handleBlur}
+              />
+              {errors.region && <p className={styles.error}>{errors.region}</p>}
+              <label className={styles.labels}>Ciudad*</label>
+              <input
+                className={styles.inputField}
+                type="text"
+                name="city"
+                value={form.city}
+                onChange={handleChange}
+                onBlur={handleBlur}
+              />
+              {errors.city && <p className={styles.error}>{errors.city}</p>}
+              <label className={styles.labels}>Domicilio*</label>
+              <input
+                className={styles.inputField}
+                type="text"
+                name="homeAdress"
+                value={form.homeAdress}
+                onChange={handleChange}
+                onBlur={handleBlur}
+              />
+              {errors.homeAdress && <p className={styles.error}>{errors.homeAdress}</p>}
+              <label className={styles.labels}>Email*</label>
+              <input
+                className={styles.inputField}
+                type="email"
+                name="email"
+                value={form.email}
+                onChange={handleChange}
+                onBlur={handleBlur}
+              />
+              {errors.email && <p className={styles.error}>{errors.email}</p>}
+              <label className={styles.labels}>Celular*</label>
+              <input
+                className={styles.inputField}
+                type="number"
+                name="cellphone"
+                value={form.cellphone}
+                onChange={handleChange}
+                onBlur={handleBlur}
+              />
+              {errors.cellphone && <p className={styles.error}>{errors.cellphone}</p>}
+            </div>
+            <div className={styles.vehicleData}>
+              <h1 className={styles.dataTitle}>Datos del vehiculo</h1>
+              <label className={styles.labels}>
+                Tipo de vehiculo utilitario*
+              </label>
+              <select
+                className={styles.inputField}
+                name="car_type"
+                value={form.car_type}
+                onChange={handleChange}
+                onBlur={handleBlur}
+              >
+                <option value="0">Seleccione una opción</option>
+                <option value="Auto">Auto</option>
+                <option value="Camioneta">Camioneta</option>
+                <option value="Trafic">Tráfic</option>
+                <option value="Camion">Camión</option>
+              </select>
+              {errors.car_type && <p className={styles.error}>{errors.car_type}</p>}
+              <label className={styles.labels}>Marca*</label>
+              <input
+                className={styles.inputField}
+                type="text"
+                name="car_brand"
+                value={form.car_brand}
+                onChange={handleChange}
+                onBlur={handleBlur}
+              />
+              {errors.car_brand && <p className={styles.error}>{errors.car_brand}</p>}
+              <label className={styles.labels}>Modelo del vehiculo*</label>
+              <input
+                className={styles.inputField}
+                type="number"
+                name="car_model"
+                value={form.car_model}
+                onChange={handleChange}
+                onBlur={handleBlur}
+              />
+              {errors.car_model && <p className={styles.error}>{errors.car_model}</p>}
+              <label className={styles.labels}>Tiene licencia?*</label>
+              <select
+                className={styles.inputField}
+                name="license"
+                value={form.license}
+                onChange={handleChange}
+                onBlur={handleBlur}
+              >
+                <option value="0">Seleccione una opción</option>
+                <option value="Si">Sí</option>
+                <option value="No">No</option>
+              </select>
+              {errors.license && <p className={styles.error}>{errors.license}</p>}
+              <label className={styles.labels}>Su póliza astá al dia?*</label>
+              <select
+                className={styles.inputField}
+                name="policy"
+                value={form.policy}
+                onChange={handleChange}
+                onBlur={handleBlur}
+              >
+                <option value="0">Seleccione una opción</option>
+                <option value="Si">Sí</option>
+                <option value="No">No</option>
+              </select>
+              {errors.policy && <p className={styles.error}>{errors.policy}</p>}
+              <label className={styles.labels}>Es titular?*</label>
+              <select
+                className={styles.inputField}
+                name="holder"
+                value={form.holder}
+                onChange={handleChange}
+                onBlur={handleBlur}
+              >
+                <option value="0">Seleccione una opción</option>
+                <option value="Si">Sí</option>
+                <option value="No">No</option>
+              </select>
+              {errors.holder && <p className={styles.error}>{errors.holder}</p>}
+            </div>
+          </div>
+          <div className={styles.buttonContainer}>
+            <button
+              type="submit"
+              // onClick={todos}
+              className={styles.submitButton}
+            >
+              ENVIAR
+            </button>
+            <button type="button" onClick={onClose} className={styles.close}>
+              CERRAR
+            </button>
+          </div>
+        </form>
+      </div>
+      <Toaster
+        toastOptions={{
+          duration: 5000,
+          style: {
+            background: "#363636",
+            color: "#fff",
+          },
+        }}
+      />
     </div>
-    
   );
-};
+}

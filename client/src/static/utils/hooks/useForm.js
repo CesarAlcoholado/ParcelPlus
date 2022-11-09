@@ -2,7 +2,7 @@ import { useState } from 'react';
 import validate from '../functions/validation';
 import cvValidation from '../functions/cvValidation';
 
-export const useForm = (initialForm, type) => {
+export const useForm = (initialForm, type, notify) => {
   const [form, setForm] = useState(initialForm);
   const [errors, setErrors] = useState({})
 
@@ -31,7 +31,7 @@ export const useForm = (initialForm, type) => {
       setErrors(cvValidation(form))
     }
     if (Object.keys(errors).length) return;
-    console.log(form);
+    notify()
   };
 
   return {
