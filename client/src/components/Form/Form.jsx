@@ -81,7 +81,7 @@ export default function Form() {
           {errors.destineCity && (
             <p className={styles.error}>{errors.destineCity}</p>
           )}
-          <label className={styles.labels}>Peso aproximado (en kg.)</label>
+          {/* <label className={styles.labels}>Peso aproximado (en kg.)</label>
           <input
             className={`${styles.inputField} ${styles.packageSize}`}
             type="number"
@@ -116,7 +116,8 @@ export default function Form() {
             onChange={handleChange}
             onBlur={handleBlur}
           />
-          {errors.value && <p className={styles.error}>{errors.value}</p>}
+          {errors.value && <p className={styles.error}>{errors.value}</p>} */}
+          
           <label className={styles.labels} id="details">
             Consulta/Información adicional
           </label>
