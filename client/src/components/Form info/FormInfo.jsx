@@ -4,6 +4,7 @@ import easy from "../../static/assets/easy.png";
 import fast from "../../static/assets/delivery.png";
 import trust from "../../static/assets/validation.png";
 import secure from "../../static/assets/box.png";
+import sign from "../../static/assets/ParcelPlusSign.jpg"
 
 export default function FormInfo() {
   return (
@@ -14,6 +15,7 @@ export default function FormInfo() {
           Completá estos datos y nos pondremos en contacto.
         </p>
       </div>
+      <img className={styles.sign} src={sign} alt="Parcel Plus Sign"/>
       <div className={styles.formCardsContainer}>
         <div className={styles.formCard}>
           <img className={styles.icon} src={easy} alt="easy icon" />

@@ -4,6 +4,7 @@
   align-items: center;
   justify-content: space-between;
   width: 700px;
+  padding: 20px;
   height: auto;
   border-radius: 5px;
 }
@@ -12,8 +13,17 @@
   width: 40px;
 }
 
+.sign {
+  height: auto;
+  width: 100%;
+  min-width: 370px;
+  border-radius: 50px 3px 50px 3px;
+  margin: 40px
+}
+
+
 .formCardsContainer {
-  display: flex;
+  display: none;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
@@ -28,6 +38,10 @@
   height: 150px;
   width: 40%;
   margin: 0.5em;
+}
+
+.title {
+  margin-bottom: auto;
 }
 
 .subtitle {
@@ -45,6 +59,10 @@
 
   .title, .contact, .h3 {
     margin: 20px 0;
+  }
+
+  .sign { 
+    display: none;
   }
 
   .formCardsContainer{
