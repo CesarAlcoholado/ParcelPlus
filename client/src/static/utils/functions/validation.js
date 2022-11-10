@@ -43,28 +43,34 @@ export default function validate(form) {
   }
 
   
-  if (form.weight) {
-    if (form.weight < 0) {
-      errors.weight = "Ingrese un peso válido";
-    } else if (!regExpNumbers.test(form.weight)) {
-      errors.weight = "El campo contiene caracteres invalidos";
-    }
-  }
+  // if (form.weight) {
+  //   if (form.weight < 0) {
+  //     errors.weight = "Ingrese un peso válido";
+  //   } else if (!regExpNumbers.test(form.weight)) {
+  //     errors.weight = "El campo contiene caracteres invalidos";
+  //   }
+  // }
   
-  if (form.measure) {
-    if (form.measure < 0) {
-      errors.measure = "Ingrese una altura válida";
-    } else if (!regExpNumbers.test(form.measure)) {
-      errors.measure = "El campo contiene caracteres invalidos";
-    }
-  }
+  // if (form.measure) {
+  //   if (form.measure < 0) {
+  //     errors.measure = "Ingrese una altura válida";
+  //   } else if (!regExpNumbers.test(form.measure)) {
+  //     errors.measure = "El campo contiene caracteres invalidos";
+  //   }
+  // }
 
-  if(form.value){
-    if (form.value < 0) {
-      errors.value = "Ingrese un valor válido";
-    } else if (!regExpNumbers.test(form.value)) {
-      errors.value = "El campo contiene caracteres invalidos";
-    }
+  // if(form.value){
+  //   if (form.value < 0) {
+  //     errors.value = "Ingrese un valor válido";
+  //   } else if (!regExpNumbers.test(form.value)) {
+  //     errors.value = "El campo contiene caracteres invalidos";
+  //   }
+  // }
+
+  if (!form.load){
+    errors.load = "Ingrese información de la carga"
+  }else if (!regExpDetails.test(form.load)){
+    errors.load = "Máximo 255 caracteres"
   }
   
   if (!form.homeAdress){

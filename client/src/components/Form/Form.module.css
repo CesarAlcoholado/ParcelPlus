@@ -1,6 +1,6 @@
 .formContainer {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   width: auto;
   background-color: #FFFDFA;
   margin: 9em auto;
@@ -24,7 +24,8 @@
 }
 
 .packageInfo{
-  padding: 0 2em;
+  padding: 0 1.5em;
+  max-width: 450px;
 }
 
 .userInfo {
@@ -69,7 +70,7 @@
   font-family: inherit;
 }
 
-.description {
+.description, .load {
   font-family: inherit;
   border-radius: 5px;
   width: 100%;
@@ -104,7 +105,34 @@
   background-color: #f4f4f4;
 }
 
+@media (max-width: 1250px){
+
+  .packageInfo, .userInfo{
+    padding: 0 1.2em
+  }
+
+  .formContainer {
+    font-size: 14px ;
+  }
+
+  .packageInfo{
+    width: 295px;
+  }
+
+  .cellphoneInput {
+    width: 12em
+  }
+
+  .submitButton {
+    font-size: 1rem;
+    padding: 0.7375rem 0.57499rem;
+  }
+
+}
+
+
 @media (max-width: 990px){
+
 .formContainer {
   font-size: 12px;
   flex-direction: column;
@@ -133,7 +161,7 @@
   font-size: 10px;
 }
 
-.description {
+.description, .load {
   width: 50%;
 }
 

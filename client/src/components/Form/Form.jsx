@@ -12,9 +12,7 @@ const initialForm = {
   destineCity: "",
   cellphone: null,
   email: "",
-  weight: null,
-  measure: null,
-  value: null,
+  size: "",
   homeAdress: "",
   moreDetails: "",
 };
@@ -117,7 +115,22 @@ export default function Form() {
             onBlur={handleBlur}
           />
           {errors.value && <p className={styles.error}>{errors.value}</p>} */}
-          
+          <label className={styles.labels} id="load">
+            Descripción de la carga* (peso, medidas, valor aprox.)
+          </label>
+          <textarea
+            className={styles.load}
+            name="load"
+            value={form.load}
+            rows="5"
+            cols="30"
+            placeholder="Dejá una descripción acá."
+            onChange={handleChange}
+            onBlur={handleBlur}
+          ></textarea>
+          {errors.load && (
+            <p className={styles.error}>{errors.load}</p>
+          )}
           <label className={styles.labels} id="details">
             Consulta/Información adicional
           </label>
