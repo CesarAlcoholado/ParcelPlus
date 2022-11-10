@@ -22,38 +22,42 @@ export default function ServicesSection() {
 
   return (
     <div className={styles.titleContainer}>
-        <h1 className={styles.ourServices}>Nuestros Servicios</h1>
+      <h1 className={styles.ourServices}>Nuestros Servicios</h1>
       <section className={styles.cardsContainer}>
-        <ServiceCard
-          title={"Logistica de E-Commerce"}
-          icon={<RiStore2Line size="40px" />}
-          image={eCommerce}
-        />
-        <ServiceCard
-          title={"Despacho y traslado"}
-          icon={<TbTruckDelivery size="90px" />}
-          image={truck}
-        />
-        <ServiceCard
-          title={"Mensajeria"}
-          icon={<FiBox size="40px" />}
-          image={envelope}
-        />
-        <ServiceCard
-          title={"Paqueteria puerta a puerta"}
-          icon={<RiDoorClosedLine size="40px" />}
-          image={doorToDoor}
-        />
-        <ServiceCard
-          title={"Pre-pactados"}
-          icon={<FaRegHandshake size="40px" />}
-          image={handShake}
-        />
-        <ServiceCard
-          title={"Expresos"}
-          icon={<RiTimerFlashLine size="40px" />}
-          image={stopwatch}
-        />
+        <div className={styles.container}>
+          <ServiceCard
+            title={"Logistica de E-Commerce"}
+            icon={<RiStore2Line size="40px" />}
+            image={eCommerce}
+          />
+          <ServiceCard
+            title={"Despacho y traslado"}
+            icon={<TbTruckDelivery size="90px" />}
+            image={truck}
+          />
+          <ServiceCard
+            title={"Mensajeria"}
+            icon={<FiBox size="40px" />}
+            image={envelope}
+          />
+        </div>
+        <div className={styles.container}>
+          <ServiceCard
+            title={"Paqueteria puerta a puerta"}
+            icon={<RiDoorClosedLine size="40px" />}
+            image={doorToDoor}
+          />
+          <ServiceCard
+            title={"Pre-pactados"}
+            icon={<FaRegHandshake size="40px" />}
+            image={handShake}
+          />
+          <ServiceCard
+            title={"Expresos"}
+            icon={<RiTimerFlashLine size="40px" />}
+            image={stopwatch}
+          />
+        </div>
       </section>
     </div>
   );

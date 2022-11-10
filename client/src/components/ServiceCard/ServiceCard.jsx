@@ -6,7 +6,7 @@ export default function ServiceCard({title, icon, image}) {
   
   return (
     <div className={styles.card}>
-      <img src={image} alt="icon" height={"70px"} />
+      <img className={styles.icon} src={image} alt="icon" height={"70px"} />
       <h3 className={styles.title}>{title}</h3>
     </div>
   );

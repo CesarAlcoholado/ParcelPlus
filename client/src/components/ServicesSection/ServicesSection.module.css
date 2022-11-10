@@ -7,10 +7,10 @@
 .cardsContainer {
   display: flex;
   justify-content: center;
-  width: 85vw;
+  width: 100vw;
   height: auto;
   margin: 0 auto;
-  padding: 80px;
+  padding: 50px;
 }
 
 .ourServices {
@@ -22,13 +22,33 @@
   width: 80vw;
 }
 
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%
+}
+
+
+@media (max-width: 1250px) {
+  .cardsContainer {
+    flex-wrap: wrap;
+  }
+
+}
+
+
+
 @media (max-width: 990px){
 
   .cardsContainer{
-    flex-direction: column;
+    flex-wrap: wrap;
     width: 100vw;
     align-items: center;
     padding: 40px
+  }
+
+  .container {
+    justify-content: space-evenly;
   }
 
 }
