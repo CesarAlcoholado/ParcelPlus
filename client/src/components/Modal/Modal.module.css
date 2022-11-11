@@ -26,3 +26,9 @@
   border-color: #ff8255;
   background-color: #f4f4f4;
 }
+
+@media (max-width: 990px) {
+  .joinButton { 
+font-size: 15px;
+  }
+}

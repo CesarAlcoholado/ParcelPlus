@@ -134,7 +134,7 @@
 @media (max-width: 990px){
 
 .formContainer {
-  font-size: 12px;
+  font-size: 15px;
   flex-direction: column;
 }
 
@@ -142,6 +142,12 @@
   margin-top: 50px;
   display:inline-block;
   height: auto;
+  width: 400px;
+  margin: 0 auto;
+}
+
+.flexContainer{
+  width: 100%;
 }
 
 .userInfo {
@@ -149,12 +155,17 @@
   border: none
 }
 
+.formTitle {
+  align-self: center;
+}
+
 .labels {
   margin-top: 0.55em;
 }
 
 .inputField {
-  width: 50%;
+  width: 100%;
+  margin: 10px 0
 }
 
 .error {
@@ -162,7 +173,8 @@
 }
 
 .description, .load {
-  width: 50%;
+  width: 100%;
+  margin: 10px 0
 }
 
 .cellphoneInput {
@@ -170,7 +182,9 @@
 }
 
 .submitButton {
-  font-size: 11px;
+  font-size: 15px;
+  align-self: center;
+  margin-top: 30px;
 }
 
 }

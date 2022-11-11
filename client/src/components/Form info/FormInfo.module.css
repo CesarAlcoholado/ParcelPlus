@@ -67,8 +67,12 @@
     justify-content: space-evenly;
   } 
 
-  .title, .contact, .h3 {
+  .title, .contact{
     margin: 20px 0;
+  }
+
+  .h3 {
+    display: none;
   }
 
   .sign { 
