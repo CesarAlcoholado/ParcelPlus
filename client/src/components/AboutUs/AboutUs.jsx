@@ -7,7 +7,7 @@ import Modal from "../Modal/Modal";
 
 export default function AboutUs() {
   return (
-    <section className={styles.aboutSection}>
+    <section id="about" className={styles.aboutSection}>
       <h1 className={styles.aboutTitle}>Por qué elegirnos</h1>
       <p className={styles.aboutSubtitle}>
         Somos una empresa con años de <b>experiencia</b> y estamos en constante
@@ -62,9 +62,11 @@ export default function AboutUs() {
         Trabajá con nosotros.
       </h1>
       <h2 className={`${styles.workSubtitle} ${styles.left}`}>
-        Vos también podes formar parte de Parcel Plus.<br/>Si te interesa ser parte de nuestro equipo, completá este formulario
+        Vos también podes formar parte de Parcel Plus.
+        <br />
+        Si te interesa ser parte de nuestro equipo, completá este formulario
       </h2>
-      <Modal/>
+      <Modal />
     </section>
   );
 }

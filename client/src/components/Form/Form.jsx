@@ -24,14 +24,9 @@ export default function Form() {
   );
 
   return (
-    <div className={styles.formContainer}>
+    <div id="quotation" className={styles.formContainer}>
       <FormInfo />
-      <form
-        className={styles.form}
-        id="quotation"
-        onSubmit={handleSubmit}
-        noValidate
-      >
+      <form className={styles.form} onSubmit={handleSubmit} noValidate>
         <div className={`${styles.packageInfo} ${styles.flexContainer}`}>
           <h1 className={styles.formTitle}>Datos de envio</h1>
           <label className={styles.labels}>Seleccione un tipo de envio*</label>
@@ -128,9 +123,7 @@ export default function Form() {
             onChange={handleChange}
             onBlur={handleBlur}
           ></textarea>
-          {errors.load && (
-            <p className={styles.error}>{errors.load}</p>
-          )}
+          {errors.load && <p className={styles.error}>{errors.load}</p>}
           <label className={styles.labels} id="details">
             Consulta/Información adicional
           </label>

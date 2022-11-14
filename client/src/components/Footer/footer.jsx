@@ -26,7 +26,7 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-          <div className={styles.footer_col}>
+          <div id="contact" className={styles.footer_col}>
             <h4>Contáctenos</h4>
             <ul>
               <li>

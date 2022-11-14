@@ -15,7 +15,7 @@ export default function Modal () {
 
 
   return (
-    <div className={styles.modal}>
+    <div className={`${openModal ? styles.open : styles.modal}`} >
       <button className={styles.joinButton} onClick={() => setOpenModal(true)}>Postularme</button>
       <Cv open={openModal} onClose={() => setOpenModal(false)} />
     </div>

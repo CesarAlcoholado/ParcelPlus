@@ -9,7 +9,7 @@ export default function NavLinks(props) {
 
   return (
     <ul className={styles.ul}>
-      <Link to="/Home">
+      <Link to="#home">
         <motion.li
           initial={animateFrom}
           animate={animateTo}
