@@ -30,6 +30,10 @@
 
 @media (max-width: 990px) {
   .joinButton { 
-font-size: 15px;
+  font-size: 15px;
   }
-}
+
+  .modal{
+   z-index: 999999 
+  }
+  }

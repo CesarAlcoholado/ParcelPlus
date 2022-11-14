@@ -20,7 +20,7 @@
   border-radius: 10px;
   background-color: #fff;
   box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.75);
-  overflow-y: hidden;
+ overflow: auto;
 }
 
 .form {
@@ -28,10 +28,12 @@
   flex-direction: column;
   justify-content: space-evenly;
   width: auto;
+  overflow: auto;
 }
 
 .formContainer{
   display: flex;
+  overflow: auto;
 }
 
 .userData, .vehicleData {
@@ -62,6 +64,8 @@
   font-family: inherit;
 }
 .error {
+  display: inline-block;
+  width: 100%;
   font-size: 11px;
   color: #fd3535;
   margin: 0.36em 0;
@@ -99,4 +103,46 @@
   color: #ff4d0b;
   background-color: #f4f4f4;
   border-color: #ff8255;
+}
+
+@media (max-width: 1250px) { 
+.content {
+    height: 80vh;
+    overflow: auto;
+    width: 80%;
+    min-width:auto;
+  }
+}
+
+@media (max-width: 990px) {
+  .formContainer {
+    flex-direction: column;
+    margin: 0 auto;
+  }
+  
+  .userData, .vehicleData { 
+    font-size: 15px;
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .content {
+    height: 80vh;
+    overflow: auto;
+    width: 80%;
+    min-width:auto;
+  }
+
+  .labels {
+    margin-top: 0.55em;
+  }
+
+  .inputField {
+    margin: 10px 0
+  }
+
+  .submitButton{
+    font-size: 15px;
+    margin-top: 30px;
+  }
 }
