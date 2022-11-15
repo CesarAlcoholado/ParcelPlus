@@ -4,6 +4,7 @@ import { useForm } from "../../static/utils/hooks/useForm";
 import { packageType } from "../../static/constants";
 import FormInfo from "../Form info/FormInfo";
 import styles from "./Form.module.css";
+import toast, { Toaster } from "react-hot-toast";
 
 const initialForm = {
   shipment: "",
@@ -17,10 +18,13 @@ const initialForm = {
   moreDetails: "",
 };
 
+const notify = () => toast.success("Formulario enviado con éxito!");
+
 export default function Form() {
   const { form, errors, handleChange, handleSubmit, handleBlur } = useForm(
     initialForm,
-    packageType
+    packageType,
+    notify
   );
 
   return (
@@ -201,9 +205,22 @@ export default function Form() {
             className={styles.submitButton}
             type="submit"
             value="Solicitar presupuesto"
+            disabled={
+              !form.name || !form.email || !form.homeAdress || !form.cellphone
+            }
           />
         </div>
       </form>
+      <Toaster
+        toastOptions={{
+          duration: 5000,
+          style: {
+            background: "#363636",
+            color: "#fff",
+          },
+        }}
+        position="bottom-center"
+      />
     </div>
   );
 }

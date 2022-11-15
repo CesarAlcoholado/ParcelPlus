@@ -42,3 +42,17 @@
     margin-top: 30px
   }
 }
+
+@media (max-width: 450px){
+  .card {
+  padding: 3px;
+  margin: 5px 5px;
+  height: 180px;
+  min-height: unset;
+  width: 30%;
+  }
+
+  .title{
+    font-size: 13px;
+  }
+}

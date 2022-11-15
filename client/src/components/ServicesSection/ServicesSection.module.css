@@ -52,3 +52,20 @@
   }
 
 }
+
+@media (max-width: 450px){
+
+  .ourServices {
+    font-size: 35px;
+  }
+
+  .cardsContainer{
+    padding: 20px 0;
+  }
+
+  .container {
+    justify-content: center;
+    width: 100%;
+    padding: 0 12px
+  }
+}

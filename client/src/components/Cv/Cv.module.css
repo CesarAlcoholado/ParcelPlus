@@ -15,12 +15,11 @@
   flex-direction: column;
   width: 40vw;
   min-width: 740px;
-  height: auto;
+  height: 80vh;
   padding: 10px;
   border-radius: 10px;
   background-color: #fff;
   box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.75);
- overflow: auto;
 }
 
 .form {
@@ -28,12 +27,12 @@
   flex-direction: column;
   justify-content: space-evenly;
   width: auto;
-  overflow: auto;
+  height: 100%;
 }
 
 .formContainer{
+  overflow-y: scroll;
   display: flex;
-  overflow: auto;
 }
 
 .userData, .vehicleData {

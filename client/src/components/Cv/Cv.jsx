@@ -93,7 +93,9 @@ export default function Cv({ open, onClose }) {
                 onChange={handleChange}
                 onBlur={handleBlur}
               />
-              {errors.homeAdress && <p className={styles.error}>{errors.homeAdress}</p>}
+              {errors.homeAdress && (
+                <p className={styles.error}>{errors.homeAdress}</p>
+              )}
               <label className={styles.labels}>Email*</label>
               <input
                 className={styles.inputField}
@@ -113,7 +115,9 @@ export default function Cv({ open, onClose }) {
                 onChange={handleChange}
                 onBlur={handleBlur}
               />
-              {errors.cellphone && <p className={styles.error}>{errors.cellphone}</p>}
+              {errors.cellphone && (
+                <p className={styles.error}>{errors.cellphone}</p>
+              )}
             </div>
             <div className={styles.vehicleData}>
               <h1 className={styles.dataTitle}>Datos del vehiculo</h1>
@@ -133,7 +137,9 @@ export default function Cv({ open, onClose }) {
                 <option value="Trafic">Tráfic</option>
                 <option value="Camion">Camión</option>
               </select>
-              {errors.car_type && <p className={styles.error}>{errors.car_type}</p>}
+              {errors.car_type && (
+                <p className={styles.error}>{errors.car_type}</p>
+              )}
               <label className={styles.labels}>Marca*</label>
               <input
                 className={styles.inputField}
@@ -143,7 +149,9 @@ export default function Cv({ open, onClose }) {
                 onChange={handleChange}
                 onBlur={handleBlur}
               />
-              {errors.car_brand && <p className={styles.error}>{errors.car_brand}</p>}
+              {errors.car_brand && (
+                <p className={styles.error}>{errors.car_brand}</p>
+              )}
               <label className={styles.labels}>Modelo del vehiculo*</label>
               <input
                 className={styles.inputField}
@@ -153,7 +161,9 @@ export default function Cv({ open, onClose }) {
                 onChange={handleChange}
                 onBlur={handleBlur}
               />
-              {errors.car_model && <p className={styles.error}>{errors.car_model}</p>}
+              {errors.car_model && (
+                <p className={styles.error}>{errors.car_model}</p>
+              )}
               <label className={styles.labels}>Tiene licencia?*</label>
               <select
                 className={styles.inputField}
@@ -166,7 +176,9 @@ export default function Cv({ open, onClose }) {
                 <option value="Si">Sí</option>
                 <option value="No">No</option>
               </select>
-              {errors.license && <p className={styles.error}>{errors.license}</p>}
+              {errors.license && (
+                <p className={styles.error}>{errors.license}</p>
+              )}
               <label className={styles.labels}>Su póliza astá al dia?*</label>
               <select
                 className={styles.inputField}
@@ -200,6 +212,15 @@ export default function Cv({ open, onClose }) {
               type="submit"
               // onClick={todos}
               className={styles.submitButton}
+              disabled={
+                !form.name ||
+                !form.age ||
+                !form.region ||
+                !form.city ||
+                !form.homeAdress ||
+                !form.email ||
+                !form.cellphone
+              }
             >
               ENVIAR
             </button>

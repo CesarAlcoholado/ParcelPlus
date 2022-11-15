@@ -26,23 +26,26 @@ export const useForm = (initialForm, type, notify) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
+    console.log(type);
     if(type === "packageForm"){
+      
       setErrors(validate(form))
     } else  if (type === "cvForm"){
-      setErrors(cvValidation(form))
+      
+      setErrors(cvValidation(form));
     }
 
-    if (Object.keys(errors).length) {
-      return
-    }else {
+    if(Object.keys(errors).length === 0) {
       if (type === "packageForm"){
         postForm(form)
       } else if (type === "cvForm"){
         postCv(form)
       }
+      notify()
+    }else {
+      
+      return;
     };
-    notify()
   };
 
   return {

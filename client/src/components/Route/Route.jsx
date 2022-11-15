@@ -5,7 +5,7 @@ export default function Route() {
   return (
     <div className={styles.routeContainer}>
       <h1 className={styles.alcance}>Cobertura</h1>
-      <h3 className={styles.h3}>Hasta 200 km desde el punto de partida</h3>
+      <p className={styles.p}>Hasta 200 km desde el punto de partida</p>
     </div>
   );
 }
