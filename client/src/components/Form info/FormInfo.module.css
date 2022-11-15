@@ -97,3 +97,24 @@
     font-size: 15px;
   }
 }
+
+@media (max-width: 450px) {
+
+  .title {
+      font-size: 25px;
+  }
+
+  .infoContainer {
+    padding: 10px;
+  }
+
+  .formCardsContainer{
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .formCard {
+    width: 45%;
+  }
+
+}

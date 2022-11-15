@@ -188,3 +188,13 @@
 }
 
 }
+
+@media (max-width: 450px){
+  .form { 
+    width: 100%;
+  }
+
+  .formTitle {
+    font-size: 25px;
+  }
+}

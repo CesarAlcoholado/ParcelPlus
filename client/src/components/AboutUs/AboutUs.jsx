@@ -19,7 +19,7 @@ export default function AboutUs() {
         <div className={styles.aboutCard}>
           <div className={styles.headline}>
             <h2 className={styles.cardTitle}>Visión</h2>
-            <img src={vision} alt="vision logo" style={{ width: "100px" }} />
+            <img className={styles.icon} src={vision} alt="vision logo" />
           </div>
           <p className={styles.description}>
             Nuestra visión es ofrecer un servicio dinámico. Óptimo y escencial
@@ -30,7 +30,7 @@ export default function AboutUs() {
         <div className={styles.aboutCard}>
           <div className={styles.headline}>
             <h2 className={styles.cardTitle}>Misión</h2>
-            <img src={mision} alt="mision logo" style={{ width: "100px" }} />
+            <img className={styles.icon} src={mision} alt="mision logo" />
           </div>
           <p className={styles.description}>
             Brindar un servicio aplicando nuestro conocimiento, predisposicion y
@@ -42,7 +42,7 @@ export default function AboutUs() {
         <div className={styles.aboutCard}>
           <div className={styles.headline}>
             <h2 className={styles.cardTitle}>Valores</h2>
-            <img src={values} alt="values logo" style={{ width: "100px" }} />
+            <img className={styles.icon} src={values} alt="values logo" />
           </div>
           <div className={styles.description}>
             <ul className={styles.valuesList}>

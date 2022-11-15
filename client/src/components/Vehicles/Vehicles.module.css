@@ -18,6 +18,7 @@
 
 .vehiclesImage{
   width: 50%;
+  min-width: 300px;
   height: auto;
   margin: 0 60px;
   margin-left: 0;
@@ -105,5 +106,20 @@
 
   .percentage {
     font-size: 35px;
+  }
+}
+
+@media (max-width: 990px){
+
+  .title {
+    font-size: 32px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .vehiclesImage {
+    margin: 0 15px;
   }
 }

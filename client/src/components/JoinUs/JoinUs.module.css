@@ -58,6 +58,21 @@
   .joinUsContainer {
     padding: 30px;
   }
+  
+  .joinTitle, .joinSubtitle {
+    word-break: break-all;
+    white-space: normal;
+  }
+}
 
+@media(max-width:450px){
+  .joinTitle {
+    font-size: 25px;
+  }
+
+  .joinSubtitle {
+    font-size: 15px;
+    font-weight: bold;
+  }
 }
 
