@@ -23,6 +23,8 @@
 }
 
 .heroContent {
+  padding-top: 85px;
+  padding-bottom: 50px;
   position: relative;
   font-family: Poppins, sans-serif;
   color: white;
@@ -71,7 +73,7 @@
 }
 
 .heroButton {
-  margin: 5rem;
+  margin: 4rem;
   border: 1px solid #ff8255;
   padding: 0.9375rem 1.875rem;
   font-size: 1.125rem;
