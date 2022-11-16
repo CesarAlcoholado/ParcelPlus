@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./footer.module.css";
+import { HashLink as Link } from "react-router-hash-link";
 import { BsFacebook } from "react-icons/bs";
 import { GrInstagram } from "react-icons/gr";
 import { FaLinkedinIn } from "react-icons/fa";
@@ -16,13 +17,10 @@ export default function Footer() {
             <h4>Compañia</h4>
             <ul>
               <li>
-                <a href="#">Acerca de </a>
+                <Link to="#about">Acerca de </Link>
               </li>
               <li>
-                <a href="#">Nuestros servicios</a>
-              </li>
-              <li>
-                <a href="#">Politicas de privacidad</a>
+                <Link to="#services">Nuestros servicios</Link>
               </li>
             </ul>
           </div>
