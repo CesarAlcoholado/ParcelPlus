@@ -1,5 +1,5 @@
 import React from "react";
-import van from "../../static/assets/float.png";
+import van from "../../static/assets/ParcelPlusVan.png";
 import styles from "./Vehicles.module.css"
 
 export default function Vehicles() {
