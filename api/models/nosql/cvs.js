@@ -42,6 +42,9 @@ const CvScheme = new mongoose.Schema(
     holder: {
       type: ["Si", "No"],
     },
+    certificate: {
+      type: ["Si", "No"],
+    },
   },
   {
     timestamps: true,

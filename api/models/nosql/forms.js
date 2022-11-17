@@ -22,17 +22,11 @@ const FormScheme = new mongoose.Schema(
       type: ["Otra", "Cipolletti", "Neuquen", "Centenario", "Plottier", "Senillosa", "Cutral Co", "Plaza Huincul", "Zapala", "Cinco Saltos", "Contralmirante Cordero", "Barda del Medio", "Campo Grande", "San Isidro", "Villa Manzano", "El Chañar", "Añelo", "Rincon de los Sauces"],
       default: "Otra"
     },
-    comment: {
+    moreDetails: {
       type: String,
     },
-    weight: {
-      type: Number,
-    },
-    measure: {
+    size: {
       type: String,
-    },
-    value: {
-      type: Number,
     },
     homeAdress: {
       type: String,
