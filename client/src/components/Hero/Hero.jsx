@@ -8,7 +8,7 @@ export default function Hero() {
     <section id="home" className={styles.hero}>
       <div className={styles.heroContent}>
         <h1 className={`${styles.heroTitle} ${styles.trackingInContract}`}>DEJÁ TU PAQUETE EN NUESTRAS MANOS</h1>
-      <Link to="#quotation" style={{"text-decoration": "none"}}>
+      <Link to="#quotation" style={{"textDecoration": "none"}}>
         <button type="button" className={styles.heroButton}>
           Solicitá ya! <IoMdArrowDropright size="30px" />
         </button>

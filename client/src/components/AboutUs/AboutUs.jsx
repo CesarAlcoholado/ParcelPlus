@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import styles from "./AboutUs.module.css";
 import vision from "../../static/assets/vision.png";
 import mision from "../../static/assets/mision.png";
@@ -6,6 +8,31 @@ import values from "../../static/assets/values.png";
 import Modal from "../Modal/Modal";
 
 export default function AboutUs() {
+
+    const { ref, inView } = useInView({
+      threshold: 0.5,
+    });
+
+    const animation = useAnimation();
+
+    useEffect(() => {
+      if (inView) {
+        animation.start({
+          x: 0,
+          transition: {
+            type: "spring",
+            duration: 1,
+            bounce: 0.3,
+          },
+        });
+      }
+      if (!inView) {
+        animation.start({
+          x: "+100vw",
+        });
+      }
+    }, [inView]);
+
   return (
     <section id="about" className={styles.aboutSection}>
       <h1 className={styles.aboutTitle}>Por qué elegirnos</h1>
@@ -15,8 +42,8 @@ export default function AboutUs() {
         <b>variedad</b> de vehiculos.<br></br>Nuestros clientes son nuestra{" "}
         <b>prioridad</b>.{" "}
       </p>
-      <div className={styles.aboutCardsContainer}>
-        <div className={styles.aboutCard}>
+      <div ref={ref} className={styles.aboutCardsContainer}>
+        <motion.div className={styles.aboutCard} animate={ animation }>
           <div className={styles.headline}>
             <h2 className={styles.cardTitle}>Visión</h2>
             <img className={styles.icon} src={vision} alt="vision logo" />
@@ -26,8 +53,8 @@ export default function AboutUs() {
             aportando no solo un servicio convencional, sino tambien avances y
             soluciones para el crecimiento de nuestros clientes
           </p>
-        </div>
-        <div className={styles.aboutCard}>
+        </motion.div>
+        <motion.div className={styles.aboutCard} animate={ animation }>
           <div className={styles.headline}>
             <h2 className={styles.cardTitle}>Misión</h2>
             <img className={styles.icon} src={mision} alt="mision logo" />
@@ -38,8 +65,8 @@ export default function AboutUs() {
             especial, que su necesidad es nuestra prioridad y que su
             satisfaccion es nuestra recompensa.
           </p>
-        </div>
-        <div className={styles.aboutCard}>
+        </motion.div>
+        <motion.div className={styles.aboutCard} animate={ animation }>
           <div className={styles.headline}>
             <h2 className={styles.cardTitle}>Valores</h2>
             <img className={styles.icon} src={values} alt="values logo" />
@@ -56,7 +83,7 @@ export default function AboutUs() {
               <li className={styles.valueItem}>Responsabilidad</li>
             </ul>
           </div>
-        </div>
+        </motion.div>
       </div>
       <h1 className={`${styles.workTitle} ${styles.left}`}>
         Trabajá con nosotros.
