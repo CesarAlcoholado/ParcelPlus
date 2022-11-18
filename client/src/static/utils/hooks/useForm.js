@@ -26,7 +26,6 @@ export const useForm = (initialForm, type, notify) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(type);
     if(type === "packageForm"){
       
       setErrors(validate(form))
