@@ -9,7 +9,7 @@ app.use(express.json());
 
 const port = process.env.PORT || 3000;
 
-// app.use("/api", require("./routes"));
+app.use("/api", require("./routes"));
 
 app.listen(port, () => {
   console.log(`**CONECTADO AL SERVIDOR, EN EL PUERTO: ${port}**`);
