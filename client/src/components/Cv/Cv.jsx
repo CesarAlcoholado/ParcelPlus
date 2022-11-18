@@ -18,6 +18,7 @@ const initialCv = {
   license: "",
   policy: "",
   holder: "",
+  certificate: ""
 };
 
 const notify = () => toast.success("Formulario enviado con éxito!");
@@ -53,7 +54,7 @@ export default function Cv({ open, onClose }) {
               />
               {errors.name && <p className={styles.error}>{errors.name}</p>}
               <label className={styles.labels}>
-                Edad* (debes ser mayor a 18 años)
+                Edad* (debés ser mayor a 18 años)
               </label>
               <input
                 className={styles.inputField}
@@ -131,7 +132,7 @@ export default function Cv({ open, onClose }) {
                 onChange={handleChange}
                 onBlur={handleBlur}
               >
-                <option value="0">Seleccione una opción</option>
+                <option value="0">Seleccioná una opción</option>
                 <option value="Auto">Auto</option>
                 <option value="Camioneta">Camioneta</option>
                 <option value="Trafic">Tráfic</option>
@@ -164,7 +165,7 @@ export default function Cv({ open, onClose }) {
               {errors.car_model && (
                 <p className={styles.error}>{errors.car_model}</p>
               )}
-              <label className={styles.labels}>Tiene licencia?*</label>
+              <label className={styles.labels}>Tenés licencia?*</label>
               <select
                 className={styles.inputField}
                 name="license"
@@ -172,14 +173,14 @@ export default function Cv({ open, onClose }) {
                 onChange={handleChange}
                 onBlur={handleBlur}
               >
-                <option value="0">Seleccione una opción</option>
+                <option value="0">Seleccioná una opción</option>
                 <option value="Si">Sí</option>
                 <option value="No">No</option>
               </select>
               {errors.license && (
                 <p className={styles.error}>{errors.license}</p>
               )}
-              <label className={styles.labels}>Su póliza astá al dia?*</label>
+              <label className={styles.labels}>Tu póliza está al dia?*</label>
               <select
                 className={styles.inputField}
                 name="policy"
@@ -187,12 +188,12 @@ export default function Cv({ open, onClose }) {
                 onChange={handleChange}
                 onBlur={handleBlur}
               >
-                <option value="0">Seleccione una opción</option>
+                <option value="0">Seleccioná una opción</option>
                 <option value="Si">Sí</option>
                 <option value="No">No</option>
               </select>
               {errors.policy && <p className={styles.error}>{errors.policy}</p>}
-              <label className={styles.labels}>Es titular?*</label>
+              <label className={styles.labels}>Sos titular?*</label>
               <select
                 className={styles.inputField}
                 name="holder"
@@ -205,6 +206,19 @@ export default function Cv({ open, onClose }) {
                 <option value="No">No</option>
               </select>
               {errors.holder && <p className={styles.error}>{errors.holder}</p>}
+              <label className={styles.labels}>Tenés certificado de antecedentes penales?*</label>
+              <select
+                className={styles.inputField}
+                name="certificate"
+                value={form.certificate}
+                onChange={handleChange}
+                onBlur={handleBlur}
+              >
+                <option value="0">Seleccioná una opción</option>
+                <option value="Si">Sí</option>
+                <option value="No">No</option>
+              </select>
+              {errors.certificate && <p className={styles.error}>{errors.certificate}</p>}
             </div>
           </div>
           <div className={styles.buttonContainer}>
@@ -219,7 +233,8 @@ export default function Cv({ open, onClose }) {
                 !form.city ||
                 !form.homeAdress ||
                 !form.email ||
-                !form.cellphone
+                !form.cellphone ||
+                !form.certificate
               }
             >
               ENVIAR
@@ -238,6 +253,7 @@ export default function Cv({ open, onClose }) {
             color: "#fff",
           },
         }}
+        position="bottom-center"
       />
     </div>
   );

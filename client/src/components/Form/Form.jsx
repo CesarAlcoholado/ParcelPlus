@@ -33,7 +33,7 @@ export default function Form() {
       <form className={styles.form} onSubmit={handleSubmit} noValidate>
         <div className={`${styles.packageInfo} ${styles.flexContainer}`}>
           <h1 className={styles.formTitle}>Datos de envio</h1>
-          <label className={styles.labels}>Seleccione un tipo de envio*</label>
+          <label className={styles.labels}>Seleccioná un tipo de envio*</label>
           <select
             className={styles.inputField}
             name="shipment"
@@ -41,7 +41,7 @@ export default function Form() {
             onChange={handleChange}
             onBlur={handleBlur}
           >
-            <option value="0">Seleccione una opción</option>
+            <option value="0">Seleccioná una opción</option>
             <option value="Particular">Envio Personal</option>
             <option value="Empresa">Envio para empresa</option>
           </select>
@@ -54,7 +54,7 @@ export default function Form() {
             onChange={handleChange}
             onBlur={handleBlur}
           >
-            <option value="0">Seleccione una opción</option>
+            <option value="0">Seleccioná una opción</option>
             {ciudadOrigen.map((c) => (
               <option value={c}>{c}</option>
             ))}
@@ -70,7 +70,7 @@ export default function Form() {
             onChange={handleChange}
             onBlur={handleBlur}
           >
-            <option value="0">Seleccione una opción</option>
+            <option value="0">Seleccioná una opción</option>
             {ciudadDestino.map((d) => (
               <option value={d}>{d}</option>
             ))}
@@ -78,42 +78,6 @@ export default function Form() {
           {errors.destineCity && (
             <p className={styles.error}>{errors.destineCity}</p>
           )}
-          {/* <label className={styles.labels}>Peso aproximado (en kg.)</label>
-          <input
-            className={`${styles.inputField} ${styles.packageSize}`}
-            type="number"
-            inputMode="decimal"
-            name="weight"
-            placeholder="2"
-            value={form.weight}
-            onChange={handleChange}
-            onBlur={handleBlur}
-          />
-          {errors.weight && <p className={styles.error}>{errors.weight}</p>}
-          <label className={styles.labels}>Altura aproximada (en cm.)</label>
-          <input
-            className={`${styles.inputField} ${styles.packageSize}`}
-            type="number"
-            inputMode="decimal"
-            name="measure"
-            placeholder="20"
-            value={form.measure}
-            onChange={handleChange}
-            onBlur={handleBlur}
-          />
-          {errors.measure && <p className={styles.error}>{errors.measure}</p>}
-          <label className={styles.labels}>Valor aproximado (en AR$)</label>
-          <input
-            className={`${styles.inputField} ${styles.packageSize}`}
-            type="number"
-            inputMode="decimal"
-            name="value"
-            placeholder="$500"
-            value={form.value}
-            onChange={handleChange}
-            onBlur={handleBlur}
-          />
-          {errors.value && <p className={styles.error}>{errors.value}</p>} */}
           <label className={styles.labels} id="load">
             Descripción de la carga* (peso, medidas, valor aprox.)
           </label>

@@ -59,7 +59,7 @@ export default function cvValidate(form){
   }
 
   if (!form.car_type || form.car_type === "0") {
-    errors.car_type = "Seleccione un tipo de vehiculo";
+    errors.car_type = "Seleccioná un tipo de vehiculo";
   }
 
   if (!form.car_brand) {
@@ -72,20 +72,24 @@ export default function cvValidate(form){
 
   if (!form.car_model){
     errors.car_model = "Ingrese modelo del vehiculo";
-  } else if (form.car_model < 2013){
-    errors.car_model = "El modelo debe ser posterior a 2013"
+  } else if (form.car_model < 2010){
+    errors.car_model = "El modelo debe ser posterior a 2010"
   } 
   
   if (!form.license || form.license === "0") {
-    errors.license = "Seleccione una opción";
+    errors.license = "Seleccioná una opción";
   }
 
   if (!form.policy || form.policy === "0") {
-    errors.policy = "Seleccione una opción";
+    errors.policy = "Seleccioná una opción";
   }
 
   if (!form.holder || form.holder === "0") {
-    errors.holder = "Seleccione una opción";
+    errors.holder = "Seleccioná una opción";
+  }
+
+  if (!form.certificate || form.certificate === "0") {
+    errors.holder = "Seleccioná una opción";
   }
   
   return errors;

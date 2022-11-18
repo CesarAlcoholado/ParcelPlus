@@ -109,7 +109,7 @@
 .content {
     height: 80vh;
     overflow: auto;
-    width: 80%;
+    width: 60vw;
     min-width:auto;
   }
 }
