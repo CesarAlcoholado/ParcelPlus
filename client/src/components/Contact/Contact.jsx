@@ -6,45 +6,75 @@ import { AiOutlineWhatsApp } from "react-icons/ai";
 export default function Footer() {
   return (
     <div className={styles.slider}>
-      Contactanos!
+      Clickea cualquiera de nuestros numeros y contactanos por WhatsApp!
       <div className={styles.slide_track}>
         <div className={styles.slide}>
           Alejandro
-          <a href="https://api.whatsapp.com/send?phone=2995124657" rel="noreferrer" target="_blank">
-          <AiOutlineWhatsApp size="14px" className={styles.number} />
-            299 5937729
-          </a>       </div>
+          <a
+            href="https://api.whatsapp.com/send?phone=2995124657"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <AiOutlineWhatsApp size="14px" className={styles.number} />
+            299 4127567
+          </a>{" "}
+        </div>
         <div className={styles.slide}>
           Graciela
-          <a href="https://api.whatsapp.com/send?phone=2995124657" rel="noreferrer" target="_blank">
-          <AiOutlineWhatsApp size="14px" className={styles.number} />
+          <a
+            href="https://api.whatsapp.com/send?phone=2995124657"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <AiOutlineWhatsApp size="14px" className={styles.number} />
             299 5937729
-          </a>       </div>
+          </a>{" "}
+        </div>
         <div className={styles.slide}>
           Yoni
-          <a href="https://api.whatsapp.com/send?phone=2995124657" rel="noreferrer" target="_blank">
-          <AiOutlineWhatsApp size="14px" className={styles.number} />
+          <a
+            href="https://api.whatsapp.com/send?phone=2995124657"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <AiOutlineWhatsApp size="14px" className={styles.number} />
             299 5124657
-          </a>       </div>
+          </a>{" "}
+        </div>
 
         <div className={styles.slide}>
           Alejandro
-          <a href="https://api.whatsapp.com/send?phone=2995124657" rel="noreferrer" target="_blank">
-          <AiOutlineWhatsApp size="14px" className={styles.number} />
-            299 5937729
-          </a>       </div>
-        <div className={styles.slide}>
-            Graciela
-            <a href="https://api.whatsapp.com/send?phone=2995124657" rel="noreferrer" target="_blank">
+          <a
+            href="https://api.whatsapp.com/send?phone=2995124657"
+            rel="noreferrer"
+            target="_blank"
+          >
             <AiOutlineWhatsApp size="14px" className={styles.number} />
-              299 5937729
-            </a>        </div>
+            299 4127567
+          </a>{" "}
+        </div>
+        <div className={styles.slide}>
+          Graciela
+          <a
+            href="https://api.whatsapp.com/send?phone=2995124657"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <AiOutlineWhatsApp size="14px" className={styles.number} />
+            299 5937729
+          </a>{" "}
+        </div>
         <div className={styles.slide}>
           Yoni
-          <a href="https://api.whatsapp.com/send?phone=2995124657" rel="noreferrer" target="_blank">
-          <AiOutlineWhatsApp size="14px" className={styles.number} />
+          <a
+            href="https://api.whatsapp.com/send?phone=2995124657"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <AiOutlineWhatsApp size="14px" className={styles.number} />
             299 5124657
-          </a>       </div>
+          </a>{" "}
+        </div>
       </div>
     </div>
   );
