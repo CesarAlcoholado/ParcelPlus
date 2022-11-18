@@ -10,7 +10,7 @@ import Modal from "../Modal/Modal";
 export default function AboutUs() {
 
     const { ref, inView } = useInView({
-      threshold: 0.5,
+      threshold: 0.2,
     });
 
     const animation = useAnimation();

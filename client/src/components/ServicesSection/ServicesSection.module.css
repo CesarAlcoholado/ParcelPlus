@@ -3,6 +3,7 @@
   width: 100vw;
   background-color: #FFFDFA;
   margin-bottom: 50px;
+  text-align: center;
 }
 .cardsContainer {
   display: flex;

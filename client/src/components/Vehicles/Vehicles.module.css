@@ -37,6 +37,7 @@
   font-size: 65px;
   font-weight: 800;
   margin: 0;
+  text-align: center;
 }
 
 .description{
@@ -44,6 +45,7 @@
   padding: 0 40px;
   font-family: inherit;
   font-size: 30px;
+  text-align: center;
 }
 
 .guarantee{
@@ -107,6 +109,9 @@
   .guaranteeTitle{
     font-size: 20px;
     font-weight: 600;
+     word-break: break-word;
+    white-space: normal;
+    text-align: center;
   }
 
   .percentage {
