@@ -8,10 +8,7 @@ const validatorCreateItem = [
   check("origenCity").exists().notEmpty(),
   check("email").notEmpty().isEmail(),
   check("destineCity").exists().notEmpty(),
-  check("weight").exists().notEmpty().isNumeric(),
-  check("measure").exists().notEmpty().isString(),
-  check("value").exists().notEmpty().isNumeric(),
-  check("comment"),
+  check("size").exists().notEmpty().isNumeric(),
   check("homeAdress").exists().notEmpty(),
   (req, res, next) => {
     return validateResults(req, res, next);

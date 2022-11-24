@@ -15,6 +15,7 @@ const validatorCreateItem = [
   check("license").exists().notEmpty(),
   check("policy").exists().notEmpty(),
   check("holder").exists().notEmpty(),
+  check("certificate").exists().notEmpty(),
   (req, res, next) => {
     return validateResults(req, res, next);
   },
