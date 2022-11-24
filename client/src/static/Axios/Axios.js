@@ -27,6 +27,6 @@ export async function postCv (form) {
     })
     return response.data
   } catch (error) {
-    console.log(error);
+    return(error);
   }
 }
