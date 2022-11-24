@@ -3,7 +3,6 @@ import styles from "./footer.module.css";
 import { HashLink as Link } from "react-router-hash-link";
 import { BsFacebook } from "react-icons/bs";
 import { GrInstagram } from "react-icons/gr";
-import { FaLinkedinIn } from "react-icons/fa";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { AiOutlineWhatsApp } from "react-icons/ai";
 import logo from "./1.png"
@@ -57,18 +56,13 @@ export default function Footer() {
             <h4>Follow us</h4>
             <ul>
               <li>
-                <a href="#">
+                <a href="https://www.facebook.com/people/Parcel-Plus/100088309893598/">
                   <BsFacebook size="20px" />
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="https://www.instagram.com/parcelplus.pp/">
                   <GrInstagram size="20px" />
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <FaLinkedinIn size="20px" />
                 </a>
               </li>
             </ul>

@@ -1,5 +1,4 @@
 const { matchedData } = require("express-validator");
-const { mongoose } = require("mongoose");
 const { cvsModel } = require("../models");
 const { handleHttpError } = require("../utils/handleError");
 
