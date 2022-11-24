@@ -8,7 +8,7 @@ import styles from './NavBar.module.css';
 export default function NavBar() {
   return (
     <div className={styles.NavBar}>
-      <Link to="#home" style={{ "margin-right": "auto" }}>
+      <Link to="#home" style={{ "marginRight": "auto" }}>
         <img
           src={Logo}
           alt="ParcelPlusLogo"

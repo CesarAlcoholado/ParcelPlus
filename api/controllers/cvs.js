@@ -9,6 +9,7 @@ const createItem = async (req, res) => {
     let data = await cvsModel.create(body);
     res.send({ data });
   } catch (error) {
+    console.log(error);
     handleHttpError(res, "ERROR_CREATE_FORM");
   }
 };

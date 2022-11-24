@@ -1,26 +1,32 @@
 import axios from 'axios';
 
-const apiForm = process.env.REACT_API_FORM;
-const apiCv = process.env.REACT_API_CV;
+const apiForm = process.env.REACT_APP_API_FORM;
+const apiCv = process.env.REACT_APP_API_CV;
 
-export function postForm (form) {
-  return async function(){
-  try {
-    let postForm = await axios.post(`${apiForm}`, form )
-    console.log(postForm);
-    return postForm;
-  } catch (error){
-    console.error(error.message)
-  }}
+export async function postForm (form) {
+  try{
+    const response = await axios
+      ({
+        url: `${apiForm}`,
+        method: 'POST',
+        data: form
+      })
+      return response.data
+  }catch(error){
+    console.log(error);
+  }
 }
 
-export function postCv (form) {
-  return async function(){
+export async function postCv (form) {
   try {
-    let postCv = await axios.post(`${apiCv}`, form);
-    console.log(postCv);
-    return postCv;
+    const response = await axios
+    ({
+      url: `${apiCv}`,
+      method: 'POST',
+      data: form
+    })
+    return response.data
   } catch (error) {
-    console.error(error.message);
-  }}
-};
+    console.log(error);
+  }
+}

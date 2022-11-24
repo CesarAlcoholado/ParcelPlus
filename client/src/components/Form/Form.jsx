@@ -21,7 +21,7 @@ const initialForm = {
 const notify = () => toast.success("Formulario enviado con éxito!");
 
 export default function Form() {
-  const { form, errors, handleChange, handleSubmit, handleBlur } = useForm(
+  const { form, errors, handleChange, handleSubmit, handleBlur, handleFormSubmit } = useForm(
     initialForm,
     packageType,
     notify
@@ -30,7 +30,7 @@ export default function Form() {
   return (
     <div id="quotation" className={styles.formContainer}>
       <FormInfo />
-      <form className={styles.form} onSubmit={handleSubmit} noValidate>
+      <form className={styles.form} onSubmit={handleFormSubmit} noValidate>
         <div className={`${styles.packageInfo} ${styles.flexContainer}`}>
           <h1 className={styles.formTitle}>Datos de envio</h1>
           <label className={styles.labels}>Seleccioná un tipo de envio*</label>
@@ -78,20 +78,20 @@ export default function Form() {
           {errors.destineCity && (
             <p className={styles.error}>{errors.destineCity}</p>
           )}
-          <label className={styles.labels} id="load">
+          <label className={styles.labels} id="size">
             Descripción de la carga* (peso, medidas, valor aprox.)
           </label>
           <textarea
             className={styles.load}
-            name="load"
-            value={form.load}
+            name="size"
+            value={form.size}
             rows="5"
             cols="30"
             placeholder="Dejá una descripción acá."
             onChange={handleChange}
             onBlur={handleBlur}
           ></textarea>
-          {errors.load && <p className={styles.error}>{errors.load}</p>}
+          {errors.size && <p className={styles.error}>{errors.size}</p>}
           <label className={styles.labels} id="details">
             Consulta/Información adicional
           </label>

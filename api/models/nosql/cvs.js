@@ -19,7 +19,6 @@ const CvScheme = new mongoose.Schema(
     },
     email: {
       type: String,
-      unique: true,
     },
     cellphone: {
       type: Number,

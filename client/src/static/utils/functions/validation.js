@@ -42,10 +42,10 @@ export default function validate(form) {
     errors.email = "El email ingresado no es valido";
   }
   
-  if (!form.load){
-    errors.load = "Ingresá información de la carga"
-  }else if (!regExpDetails.test(form.load)){
-    errors.load = "Máximo 255 caracteres"
+  if (!form.size){
+    errors.size = "Ingresá información de la carga"
+  }else if (!regExpDetails.test(form.size)){
+    errors.size = "Máximo 255 caracteres"
   }
   
   if (!form.homeAdress){

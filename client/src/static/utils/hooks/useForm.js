@@ -24,34 +24,59 @@ export const useForm = (initialForm, type, notify) => {
     }
   }
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if(type === "packageForm"){
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   if(type === "packageForm"){
       
-      setErrors(validate(form))
-    } else  if (type === "cvForm"){
+  //     setErrors(validate(form))
+  //   } else  if (type === "cvForm"){
       
-      setErrors(cvValidation(form));
-    }
+  //     setErrors(cvValidation(form));
+  //   }
 
-    if(Object.keys(errors).length === 0) {
-      if (type === "packageForm"){
-        postForm(form)
-      } else if (type === "cvForm"){
-        postCv(form)
-      }
-      notify()
-    }else {
+  //   if(Object.keys(errors).length === 0) {
+  //     if (type === "packageForm"){
+  //       postForm(form)
+  //     } else if (type === "cvForm"){
+  //       console.log("cv");
+  //       postCv(form)
+  //     }
+  //     notify()
+  //   }else {
       
+  //     return;
+  //   };
+  // };
+
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    setErrors(validate(form));
+    if(Object.keys(errors).length === 0) {
+      postForm(form)
+      notify()
+    } else {
+      return
+    }
+  }
+
+  const handleCvSubmit = (e) => {
+    e.preventDefault();
+    setErrors(cvValidation(form));
+    if (Object.keys(errors).length === 0) {
+      postCv(form);
+      notify();
+    } else {
       return;
-    };
+    }
   };
 
   return {
     form,
     errors,
     handleChange,
-    handleSubmit,
-    handleBlur
+    // handleSubmit,
+    handleBlur,
+    handleFormSubmit,
+    handleCvSubmit
   }
 };

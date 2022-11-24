@@ -24,7 +24,7 @@ const initialCv = {
 const notify = () => toast.success("Formulario enviado con éxito!");
 
 export default function Cv({ open, onClose }) {
-  const { form, errors, handleChange, handleSubmit, handleBlur } = useForm(
+  const { form, errors, handleChange, handleSubmit, handleBlur, handleCvSubmit } = useForm(
     initialCv,
     cvType,
     notify
@@ -39,7 +39,7 @@ export default function Cv({ open, onClose }) {
   return (
     <div className={styles.container}>
       <div className={styles.content}>
-        <form className={styles.form} noValidate onSubmit={handleSubmit}>
+        <form className={styles.form} noValidate onSubmit={handleCvSubmit}>
           <div className={styles.formContainer}>
             <div className={styles.userData}>
               <h1 className={styles.dataTitle}>Tus datos</h1>
