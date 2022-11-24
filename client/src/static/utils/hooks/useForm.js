@@ -24,30 +24,6 @@ export const useForm = (initialForm, type, notify) => {
     }
   }
 
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   if(type === "packageForm"){
-      
-  //     setErrors(validate(form))
-  //   } else  if (type === "cvForm"){
-      
-  //     setErrors(cvValidation(form));
-  //   }
-
-  //   if(Object.keys(errors).length === 0) {
-  //     if (type === "packageForm"){
-  //       postForm(form)
-  //     } else if (type === "cvForm"){
-  //       console.log("cv");
-  //       postCv(form)
-  //     }
-  //     notify()
-  //   }else {
-      
-  //     return;
-  //   };
-  // };
-
   const handleFormSubmit = (e) => {
     e.preventDefault();
     setErrors(validate(form));
@@ -74,7 +50,6 @@ export const useForm = (initialForm, type, notify) => {
     form,
     errors,
     handleChange,
-    // handleSubmit,
     handleBlur,
     handleFormSubmit,
     handleCvSubmit
