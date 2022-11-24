@@ -1,5 +1,4 @@
 const { matchedData } = require("express-validator");
-const { mongoose } = require("mongoose");
 const { formsModel } = require("../models");
 const { handleHttpError } = require("../utils/handleError");
 const { transporter } = require("../config/email");
@@ -20,11 +19,9 @@ const createItem = async (req, res) => {
           <li>Telofono: ${data.cellphone}</li>
           <li>Ciudad de origen: ${data.origenCity}</li>
           <li>Ciudad de destino: ${data.destineCity}</li>
-          <li>Peso: ${data.weight}</li>
-          <li>Medida: ${data.measure}</li>
-          <li>Valor: ${data.value}</li>
           <li>Direccion de destino: ${data.homeAdress}</li>
-          <li>Comentario: ${data.comment}</li>`,
+          <li>Descripcion de la carga: ${data.size}</li>
+          <li>Comentarios: ${data.moreDetails}</li>`,
     });
     try {
       res.send({ data });
