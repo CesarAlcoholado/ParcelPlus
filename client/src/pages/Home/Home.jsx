@@ -5,7 +5,7 @@ import Hero from '../../components/Hero/Hero.jsx'
 import ServicesSection from '../../components/ServicesSection/ServicesSection.jsx';
 import Route from '../../components/Route/Route.jsx';
 import Vehicles from '../../components/Vehicles/Vehicles.jsx';
-import Footer from '../../components/Footer/foter.jsx';
+import Footer from '../../components/Footer/Footer.js';
 import Contact from '../../components/Contact/Contact.jsx';
 import AboutUs from '../../components/AboutUs/AboutUs.jsx';
 import JoinUs from '../../components/JoinUs/JoinUs.jsx';
