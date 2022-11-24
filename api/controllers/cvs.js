@@ -1,6 +1,7 @@
 const { matchedData } = require("express-validator");
 const { cvsModel } = require("../models");
 const { handleHttpError } = require("../utils/handleError");
+const { transporter } = require("../config/email");
 
 const createItem = async (req, res) => {
   try {
