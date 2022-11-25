@@ -11,7 +11,7 @@ export default function Footer() {
         <div className={styles.slide}>
           Alejandro
           <a
-            href="https://api.whatsapp.com/send?phone=2995124657"
+            href="https://api.whatsapp.com/send?phone=2994127567"
             rel="noreferrer"
             target="_blank"
           >
@@ -22,7 +22,7 @@ export default function Footer() {
         <div className={styles.slide}>
           Graciela
           <a
-            href="https://api.whatsapp.com/send?phone=2995124657"
+            href="https://api.whatsapp.com/send?phone=2995937729"
             rel="noreferrer"
             target="_blank"
           >
@@ -45,7 +45,7 @@ export default function Footer() {
         <div className={styles.slide}>
           Alejandro
           <a
-            href="https://api.whatsapp.com/send?phone=2995124657"
+            href="https://api.whatsapp.com/send?phone=2994127567"
             rel="noreferrer"
             target="_blank"
           >
@@ -56,7 +56,7 @@ export default function Footer() {
         <div className={styles.slide}>
           Graciela
           <a
-            href="https://api.whatsapp.com/send?phone=2995124657"
+            href="https://api.whatsapp.com/send?phone=2995937729"
             rel="noreferrer"
             target="_blank"
           >
