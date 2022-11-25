@@ -7,6 +7,8 @@ if (process.env.REACT_APP_NODE_ENV === "production") {
   disableReactDevTools();
 }
 
+var docWidth = document.documentElement.offsetWidth;
+
 function App() {
   return (
     <div className="App">

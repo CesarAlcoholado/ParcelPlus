@@ -31,7 +31,7 @@ export default function Route() {
 
   return (
     <div ref={ref} className={styles.routeContainer}>
-      <motion.div animate={ animation }>
+      <motion.div animate={animation} style={{"overflow": "hidden"}}>
         <h1 className={styles.alcance}>Cobertura</h1>
         <p className={styles.p}>Hasta 200 km desde el punto de partida</p>
       </motion.div>

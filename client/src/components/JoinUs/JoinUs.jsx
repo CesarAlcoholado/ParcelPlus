@@ -31,10 +31,11 @@ export default function JoinUs() {
 
   return (
     <div ref={ref} className={styles.joinUsContainer}>
-      <motion.div
-      animate={ animation }>
+      <motion.div style={{ "overflow": "hidden" }} animate={animation}>
         <h1 className={styles.joinTitle}>Sumate a nuestro equipo.</h1>
-        <h3 className={styles.joinSubtitle}>Envianos tus datos y a la brevedad nos pondremos en contacto.</h3>
+        <h3 className={styles.joinSubtitle}>
+          Envianos tus datos y a la brevedad nos pondremos en contacto.
+        </h3>
       </motion.div>
     </div>
   );

@@ -14,7 +14,7 @@
   clip: rect(0, auto, auto, 0);
   background-color: #474747;
   box-sizing: border-box;
-
+  overflow-x: hidden;
 }
 
 .joinUsContainer::before {
