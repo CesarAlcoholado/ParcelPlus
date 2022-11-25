@@ -1,9 +1,11 @@
 
+
 .titleContainer{
   width: 100vw;
   background-color: #FFFDFA;
   margin-bottom: 50px;
   text-align: center;
+  overflow-x: hidden;
 }
 .cardsContainer {
   display: flex;
@@ -34,6 +36,10 @@
   .cardsContainer {
     flex-wrap: wrap;
   }
+  
+  .titleContainer{
+  overflow-x: hidden;
+  }
 
 }
 
@@ -52,6 +58,9 @@
     justify-content: space-evenly;
   }
 
+  .titleContainer{
+  overflow-x: hidden;
+  }
 }
 
 @media (max-width: 450px){
@@ -68,5 +77,9 @@
     justify-content: center;
     width: 100%;
     padding: 0 12px
+  }
+
+  .titleContainer{
+  overflow-x: hidden;
   }
 }

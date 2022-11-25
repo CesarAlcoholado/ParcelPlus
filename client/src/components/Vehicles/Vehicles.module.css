@@ -14,6 +14,7 @@
   background-size: cover;
   background-position: center center;
   /* filter: brightness(90%); */
+
 }
 
 .vehiclesImage{
@@ -56,6 +57,7 @@
   background-color: #DA2E25;
   margin: 0;
   padding: 30px;
+    overflow-x: hidden;
 }
 
 .guaranteeTitle {
@@ -113,7 +115,9 @@
     white-space: normal;
     text-align: center;
   }
-
+  .guarantee{
+  overflow-x: hidden;
+  }
   .percentage {
     font-size: 35px;
   }
@@ -132,5 +136,8 @@
   .vehiclesImage {
     margin: 0 15px;
     min-width: 250px;
+  }
+  .guarantee{
+  overflow-x: hidden;
   }
 }

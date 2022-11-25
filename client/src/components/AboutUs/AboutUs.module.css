@@ -9,6 +9,7 @@
   width: 100vw;
   height: auto;
   background-color: #f6f6f6;
+  overflow-x: hidden;
 }
 
 .aboutTitle {
@@ -115,6 +116,7 @@
   .aboutSection {
     justify-content: center;
     height: auto;
+    overflow-x: hidden;
   }
 
   .aboutCardsContainer {
@@ -158,7 +160,9 @@
 }
 
 @media (max-width: 450px) {
-
+  .aboutSection {
+    overflow-x: hidden;
+  }
   .aboutTitle { 
     font-size: 25px;
     margin-bottom: 50px;

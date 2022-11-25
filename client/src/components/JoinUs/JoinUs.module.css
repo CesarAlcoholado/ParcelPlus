@@ -57,6 +57,7 @@
   }
 
   .joinUsContainer {
+    overflow-x: hidden;
     padding: 30px;
   }
   
@@ -69,6 +70,9 @@
 @media(max-width:450px){
   .joinTitle {
     font-size: 25px;
+  }
+  .joinUsContainer {
+    overflow-x: hidden;
   }
 
   .joinSubtitle {

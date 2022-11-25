@@ -8,6 +8,7 @@ html{
 
 html, body {
   overflow-x: hidden;
+  max-width: 100%;
 }
 
 body {
@@ -22,4 +23,23 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+@media (max-width< 1250px){
+  html, body {
+  overflow-x: hidden;
+}
+
+}
+
+@media (max-width<990px){
+  html, body {
+    overflow-x: hidden;
+  }
+}
+
+@media (max-width<440px){
+  html, body {
+    overflow-x: hidden;
+  }
 }
