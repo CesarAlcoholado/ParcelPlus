@@ -25,7 +25,7 @@ ul {
   padding: 0 15px;
 }
 .footer_col h4 {
-  width: 100px;
+  width: auto;
   font-size: 18px;
   color: #ffffff;
   text-transform: capitalize;
